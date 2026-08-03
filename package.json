@@ -1,0 +1,8 @@
+{
+  "name": "guli-site",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "echo static site - nothing to build"
+  }
+}
