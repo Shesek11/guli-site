@@ -3,27 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>גולי · פרח של אהבה — זרי כלה מתחרה ופנינים</title>
-<meta name="description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים — מזכרת שנשארת לתמיד. גולי · פרח של אהבה.">
+<title>גולי · פרח של אהבה | זרי כלה מתחרה ופנינים</title>
+<meta name="description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. מזכרת שנשארת לתמיד. גולי · פרח של אהבה.">
+<meta name="theme-color" content="#1A1D21">
 <meta property="og:type" content="website">
-<meta property="og:title" content="גולי · פרח של אהבה — זרי כלה מתחרה ופנינים">
-<meta property="og:description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים — מזכרת שנשארת לתמיד.">
+<meta property="og:title" content="גולי · פרח של אהבה | זרי כלה מתחרה ופנינים">
+<meta property="og:description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. מזכרת שנשארת לתמיד.">
 <meta property="og:image" content="https://guli-flower.wp1.host/assets/img/og.jpg">
 <meta property="og:url" content="https://guli-flower.wp1.host/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌸%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;600&family=Assistant:wght@300;400;600&family=Bellefair&family=Alef&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Alef&display=swap" rel="stylesheet">
 <script>try{var qp=new URLSearchParams(location.search).get('pal');var PALS=['ivory','mist','rose','gold','sage','wine','night'];var pal=PALS.indexOf(qp)>-1?qp:(localStorage.getItem('guli-pal2')||'night');document.documentElement.className='theme-c pal-'+pal;localStorage.setItem('guli-pal2',pal)}catch(e){}</script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  :root, html.theme-a {
-    --bg:#FDFBF7; --text:#2C2A29; --muted:#5C5346; --accent:#B59D7E;
-    --deep:#8A6F4D; --line:#E9E0D2;
-    --font-display:'Frank Ruhl Libre', serif; --font-body:'Assistant', sans-serif;
-    --frame:1px solid var(--accent); --tilt:0deg; --card-shadow:none; --radius:4px;
-  }
   html.theme-c {
     --bg:#FAF9F9; --text:#5C4B51; --muted:#857278; --accent:#E2DFDB;
     --deep:#5C4B51; --line:#EDE9E7;
@@ -31,16 +26,22 @@
     --frame:none; --tilt:-1.2deg; --card-shadow:0 6px 18px rgba(92,75,81,.14); --radius:14px;
   }
 
-  /* color palettes — override colors only; fonts/frames stay per theme-a/c */
+  /* color palettes: override colors only; fonts/frames stay in theme-c */
   html.pal-ivory { --bg:#FDFBF7; --text:#2C2A29; --muted:#5C5346; --accent:#B59D7E; --deep:#8A6F4D; --line:#E9E0D2; --field-bg:#fff; }
-  html.pal-mist  { --bg:#FAF9F9; --text:#5C4B51; --muted:#857278; --accent:#E2DFDB; --deep:#5C4B51; --line:#EDE9E7; --field-bg:#fff; }
+  html.pal-mist  { --bg:#FAF9F9; --text:#5C4B51; --muted:#7A6A70; --accent:#E2DFDB; --deep:#5C4B51; --line:#EDE9E7; --field-bg:#fff; }
   html.pal-rose  { --bg:#FBF3F0; --text:#462B27; --muted:#7A5650; --accent:#D9A79B; --deep:#A0524A; --line:#F0DBD3; --field-bg:#fff; }
-  html.pal-gold  { --bg:#FBF5EA; --text:#3D3421; --muted:#6B5B3E; --accent:#CBA95B; --deep:#8E6D24; --line:#EDDFC0; --field-bg:#fff; }
+  html.pal-gold  { --bg:#FBF5EA; --text:#3D3421; --muted:#6B5B3E; --accent:#CBA95B; --deep:#82631C; --line:#EDDFC0; --field-bg:#fff; }
   html.pal-sage  { --bg:#F4F6F1; --text:#2E3A2B; --muted:#5C6B54; --accent:#A9BCA0; --deep:#4E6B42; --line:#DEE6D6; --field-bg:#fff; }
   html.pal-wine  { --bg:#FBF6F3; --text:#3B222A; --muted:#6E4A55; --accent:#C29AA6; --deep:#7A2F44; --line:#EFDDE2; --field-bg:#fff; }
-  html.pal-night { --bg:#1A1D21; --text:#F2F0EC; --muted:#B7B3AB; --accent:#D9C7BC; --deep:#8A6F4D; --line:#31353A; --field-bg:#23272C; }
+  html.pal-night { --bg:#1A1D21; --text:#F2F0EC; --muted:#B7B3AB; --accent:#D9C7BC; --deep:#8A6F4D; --link:#D9C7BC; --line:#31353A; --field-bg:#23272C; }
 
-  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  .skip-link {
+    position: fixed; top: 0; inset-inline-start: 12px; z-index: 40;
+    background: var(--deep); color: #fff; padding: 10px 18px;
+    border-radius: 0 0 10px 10px; transform: translateY(-130%); transition: transform .2s ease;
+  }
+  .skip-link:focus-visible { transform: translateY(0); }
   body {
     background: var(--bg); color: var(--text);
     font-family: var(--font-body); font-size: 18px; line-height: 1.55;
@@ -52,7 +53,7 @@
   section { padding: 56px 20px; }
   .wrap { max-width: 1060px; margin-inline: auto; }
   img { max-width: 100%; display: block; }
-  a { color: var(--deep); }
+  a { color: var(--link, var(--deep)); }
   :focus-visible { outline: 2px solid var(--deep); outline-offset: 2px; }
 
   .divider { text-align: center; color: var(--accent); font-size: 18px; letter-spacing: .5em; margin: 6px 0 14px; }
@@ -84,7 +85,7 @@
   .btn svg { width: 19px; height: 19px; flex: none; }
   .btn-main { background: var(--deep); color: #fff; }
   .btn-main:hover { filter: brightness(1.08); }
-  .btn-sec { border: 1px solid var(--accent); color: var(--deep); background: transparent; }
+  .btn-sec { border: 1px solid var(--accent); color: var(--link, var(--deep)); background: transparent; }
   .btn-small { padding: 8px 18px; font-size: 15px; }
 
   /* hero */
@@ -135,7 +136,7 @@
   /* real */
   .real-grid { columns: 3; column-gap: 22px; }
   .real-grid .figure { break-inside: avoid; margin-bottom: 22px; }
-  .real-grid .figure img { width: 100%; border: var(--frame); border-radius: var(--radius); box-shadow: var(--card-shadow); transform: rotate(var(--tilt)); }
+  .real-grid .figure img { width: 100%; height: auto; border: var(--frame); border-radius: var(--radius); box-shadow: var(--card-shadow); transform: rotate(var(--tilt)); }
   html.theme-c .real-grid .figure:nth-child(even) img { transform: rotate(1.1deg); }
   .real-grid figcaption { font-size: 14px; color: var(--muted); text-align: center; margin: 8px 0 4px; }
 
@@ -182,7 +183,7 @@
   }
   form textarea { min-height: 90px; resize: vertical; }
   form button { margin-top: 20px; width: 100%; }
-  #form-status { margin-top: 12px; font-size: 15.5px; color: var(--deep); min-height: 1.4em; }
+  #form-status { margin-top: 12px; font-size: 15.5px; color: var(--link, var(--deep)); min-height: 1.4em; }
   .contact-direct { background: color-mix(in srgb, var(--line) 40%, var(--bg)); border-radius: var(--radius); padding: 26px; }
   .contact-direct h3 { font-size: 22px; margin-bottom: 8px; }
   .contact-direct p { color: var(--muted); font-size: 15.5px; margin-bottom: 18px; }
@@ -199,7 +200,7 @@
   /* floaters */
   .fab {
     position: fixed; bottom: 18px; inset-inline-end: 18px; z-index: 30;
-    width: 56px; height: 56px; border-radius: 50%; background: #25D366;
+    width: 56px; height: 56px; border-radius: 50%; background: #128C7E;
     display: flex; align-items: center; justify-content: center;
     box-shadow: 0 6px 18px rgba(0,0,0,.22);
   }
@@ -208,7 +209,7 @@
   .theme-toggle {
     position: fixed; bottom: 26px; inset-inline-start: 18px; z-index: 30;
     padding: 9px 18px; border-radius: 999px; border: 1px solid var(--accent);
-    background: var(--bg); color: var(--deep); font: inherit; font-size: 14px; cursor: pointer;
+    background: var(--bg); color: var(--link, var(--deep)); font: inherit; font-size: 14px; cursor: pointer;
     box-shadow: 0 4px 14px rgba(0,0,0,.12);
   }
   .design-panel[hidden] { display: none; }
@@ -218,11 +219,6 @@
     padding: 14px 16px; box-shadow: 0 10px 30px rgba(0,0,0,.18); display: grid; gap: 12px;
   }
   .dp-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-  .dp-style {
-    font: inherit; font-size: 14px; padding: 6px 14px; border-radius: 999px;
-    border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer;
-  }
-  .dp-style.active { background: var(--deep); color: #fff; border-color: var(--deep); }
   .dp-dot { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--bg); box-shadow: 0 0 0 1px var(--line); cursor: pointer; }
   .dp-dot.active { box-shadow: 0 0 0 2px var(--deep); }
   @keyframes toggle-pulse {
@@ -252,6 +248,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main">דילוג לתוכן</a>
+
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="#">גולי · פרח של אהבה</a>
@@ -267,13 +265,13 @@
   </div>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
     <div class="wrap">
       <div class="hero-blob" aria-hidden="true"></div>
       <div class="hero-text">
         <h1>זר כלה שנשאר לתמיד</h1>
-        <p>זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים — מזכרת אחת יפה מהיום המיוחד שלך.</p>
+        <p>זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים: מזכרת אחת יפה מהיום המיוחד שלך.</p>
         <div class="cta-row">
           <a class="btn btn-main" href="https://wa.me/972526336363?text=היי%20גולי%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c0 .2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.1.5.1.7-.1l1.1-1.3c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
@@ -321,7 +319,7 @@
   <section class="collection" id="collection">
     <div class="wrap">
       <h2 class="ruled">הקולקציה</h2>
-      <p class="sub-h">שבעה דגמים, אינסוף התאמות אישיות · התמונות להמחשה בלבד — הזר האמיתי נרקם עבורך ביד</p>
+      <p class="sub-h">שבעה דגמים, אינסוף התאמות אישיות · התמונות להמחשה בלבד. הזר האמיתי נרקם עבורך ביד</p>
       <div class="cards">
         <div class="card">
           <div class="figure"><img src="assets/img/bride-lily.webp" alt="כלה מחזיקה זר שושן תחרה" loading="lazy"><span class="sim-badge">תמונת המחשה</span></div>
@@ -372,42 +370,42 @@
   <section class="real">
     <div class="wrap">
       <h2 class="ruled">עבודת יד אמיתית</h2>
-      <p class="sub-h">אלה הזרים האמיתיים, רגע אחרי שנרקמו — בלי פילטרים ובלי הדמיות.</p>
+      <p class="sub-h">אלה הזרים האמיתיים, רגע אחרי שנרקמו, בלי פילטרים ובלי הדמיות.</p>
       <div class="real-grid">
         <figure class="figure">
-          <img src="assets/img/real-rose.webp" alt="ורד תחרה עם אבקני פנינים באור יום" loading="lazy">
+          <img src="assets/img/real-rose.webp" alt="ורד תחרה עם אבקני פנינים באור יום" width="800" height="806" loading="lazy">
           <figcaption>ורד תחרה באור בוקר</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/real-orchid-day.webp" alt="מפל סחלבים ופנינים על אגרטל זכוכית" loading="lazy">
+          <img src="assets/img/real-orchid-day.webp" alt="מפל סחלבים ופנינים על אגרטל זכוכית" width="800" height="933" loading="lazy">
           <figcaption>Pearl Orchid על הכן</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/real-dream-top.webp" alt="פרח אורגנזה בקווי פנינים במבט מלמעלה" loading="lazy">
+          <img src="assets/img/real-dream-top.webp" alt="פרח אורגנזה בקווי פנינים במבט מלמעלה" width="800" height="805" loading="lazy">
           <figcaption>Pearl Dream, מבט מלמעלה</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/real-lacepearl.webp" alt="עלי תחרה רקומה בשולי פנינים" loading="lazy">
+          <img src="assets/img/real-lacepearl.webp" alt="עלי תחרה רקומה בשולי פנינים" width="800" height="796" loading="lazy">
           <figcaption>עלי תחרה בשולי פנינים</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/real-gold.webp" alt="פרח תחרה בגימור זהב בתוך אריזת מתנה" loading="lazy">
+          <img src="assets/img/real-gold.webp" alt="פרח תחרה בגימור זהב בתוך אריזת מתנה" width="800" height="696" loading="lazy">
           <figcaption>גימור זהב עדין, כבר באריזה</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/real-calla.webp" alt="פרח קאלה מאורגנזה שקופה ותחרה" loading="lazy">
+          <img src="assets/img/real-calla.webp" alt="פרח קאלה מאורגנזה שקופה ותחרה" width="800" height="826" loading="lazy">
           <figcaption>קאלה מאורגנזה</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/real-elegance-day.webp" alt="פרח פנינים מלא באור יום" loading="lazy">
+          <img src="assets/img/real-elegance-day.webp" alt="פרח פנינים מלא באור יום" width="800" height="949" loading="lazy">
           <figcaption>Pearl Elegance באור יום</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/real-detail.webp" alt="תקריב של שרשראות פנינים וסרט תחרה" loading="lazy">
+          <img src="assets/img/real-detail.webp" alt="תקריב של שרשראות פנינים וסרט תחרה" width="800" height="913" loading="lazy">
           <figcaption>הפרטים הקטנים: פנינה, תחרה, סרט</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/real-gift.webp" alt="זר תחרה ארוז באריזת מתנה פירמידה שקופה" loading="lazy">
+          <img src="assets/img/real-gift.webp" alt="זר תחרה ארוז באריזת מתנה פירמידה שקופה" width="800" height="715" loading="lazy">
           <figcaption>מוכן למסירה, באריזת מתנה</figcaption>
         </figure>
       </div>
@@ -417,25 +415,25 @@
   <section class="moments">
     <div class="wrap">
       <h2 class="ruled">הזר ביום הגדול</h2>
-      <p class="sub-h">תמונות המחשה שנוצרו מהזרים האמיתיים — ככה זה מרגיש</p>
+      <p class="sub-h">תמונות המחשה שנוצרו מהזרים האמיתיים. ככה זה מרגיש</p>
       <div class="moments-grid">
         <figure class="figure">
-          <img src="assets/img/gallery-1.webp" alt="כלה מחזיקה זר שושן תחרה — תמונת המחשה" loading="lazy">
+          <img src="assets/img/gallery-1.webp" alt="כלה מחזיקה זר שושן תחרה, תמונת המחשה" loading="lazy">
           <span class="sim-badge">תמונת המחשה</span>
           <figcaption>שושן תחרה</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/gallery-2.webp" alt="כלה יושבת עם זר Pearl Orchid — תמונת המחשה" loading="lazy">
+          <img src="assets/img/gallery-2.webp" alt="כלה יושבת עם זר Pearl Orchid, תמונת המחשה" loading="lazy">
           <span class="sim-badge">תמונת המחשה</span>
           <figcaption>Pearl Orchid</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/gallery-3.webp" alt="כלה מושיטה זר Pearl Dream — תמונת המחשה" loading="lazy">
+          <img src="assets/img/gallery-3.webp" alt="כלה מושיטה זר Pearl Dream, תמונת המחשה" loading="lazy">
           <span class="sim-badge">תמונת המחשה</span>
           <figcaption>Pearl Dream</figcaption>
         </figure>
         <figure class="figure">
-          <img src="assets/img/gallery-4.webp" alt="כלה מחזיקה ורד תחרה גדול — תמונת המחשה" loading="lazy">
+          <img src="assets/img/gallery-4.webp" alt="כלה מחזיקה ורד תחרה גדול, תמונת המחשה" loading="lazy">
           <span class="sim-badge">תמונת המחשה</span>
           <figcaption>ורד תחרה</figcaption>
         </figure>
@@ -455,7 +453,7 @@
       <h2>מי מאחורי הפרחים</h2>
       <div class="divider" aria-hidden="true">♡</div>
       <!-- TODO: סיפור אמיתי -->
-      <p>גולי יוצרת זרי כלה בעבודת יד, פרח אחר פרח: תחרה, אורגנזה ופנינים שנארגים לזר שנשאר איתך גם אחרי החתונה. כל זר נתפר בהתאמה אישית לכלה — לשמלה, לסגנון, לסיפור שלה. פרח של אהבה נולד מהאמונה שדבר שנעשה באהבה צריך להישאר לתמיד.</p>
+      <p>גולי יוצרת זרי כלה בעבודת יד, פרח אחר פרח: תחרה, אורגנזה ופנינים שנארגים לזר שנשאר איתך גם אחרי החתונה. כל זר נתפר בהתאמה אישית לכלה: לשמלה, לסגנון, לסיפור שלה. פרח של אהבה נולד מהאמונה שדבר שנעשה באהבה צריך להישאר לתמיד.</p>
     </div>
   </section>
 
@@ -464,15 +462,15 @@
       <h2 class="ruled">שאלות ששואלות אותי</h2>
       <div class="faq-item">
         <h3>אפשר להתאים זר במיוחד בשבילי?</h3>
-        <p>בטח. כל זר נרקם בהזמנה אישית — בוחרות יחד דגם, גווני פנינים ותחרה, והזר נבנה להתאים לשמלה ולסגנון שלך.</p>
+        <p>בטח. כל זר נרקם בהזמנה אישית: בוחרות יחד דגם, גווני פנינים ותחרה, והזר נבנה להתאים לשמלה ולסגנון שלך.</p>
       </div>
       <div class="faq-item">
         <h3>ממה עשוי הזר, והוא באמת נשאר?</h3>
-        <p>תחרה, אורגנזה ופנינים — בלי פרחים חיים. הזר לא נובל, לא מאבד צורה, ונשאר איתך כמזכרת גם שנים אחרי החתונה.</p>
+        <p>תחרה, אורגנזה ופנינים, בלי פרחים חיים. הזר לא נובל, לא מאבד צורה, ונשאר איתך כמזכרת גם שנים אחרי החתונה.</p>
       </div>
       <div class="faq-item">
         <h3>זה מתאים גם כמתנה?</h3>
-        <p>מאוד. הזר מגיע באריזת מתנה שקופה וחגיגית — מתנה מרגשת לכלה מחברות, מאמא או מאחות.</p>
+        <p>מאוד. הזר מגיע באריזת מתנה שקופה וחגיגית: מתנה מרגשת לכלה מחברות, מאמא או מאחות.</p>
       </div>
     </div>
   </section>
@@ -486,7 +484,7 @@
           <label for="f-name">שם *</label>
           <input id="f-name" name="name" required autocomplete="name">
           <label for="f-phone">טלפון *</label>
-          <input id="f-phone" name="phone" type="tel" required pattern="0[2-9][0-9]{7,8}" autocomplete="tel" dir="ltr" style="text-align:end">
+          <input id="f-phone" name="phone" type="tel" required pattern="0[2-9][0-9]{7,8}" title="מספר טלפון ישראלי, ספרות בלבד, למשל 0526336363" autocomplete="tel" dir="ltr" style="text-align:end">
           <label for="f-date">תאריך האירוע (לא חובה)</label>
           <input id="f-date" name="date" type="date">
           <label for="f-msg">כמה מילים (לא חובה)</label>
@@ -497,7 +495,7 @@
       </div>
       <div class="contact-direct">
         <h3>מעדיפה ישירות?</h3>
-        <p>הדרך הכי מהירה — הודעה קצרה בוואטסאפ. אפשר גם להתקשר.</p>
+        <p>הדרך הכי מהירה: הודעה קצרה בוואטסאפ. אפשר גם להתקשר.</p>
         <a class="btn btn-main" href="https://wa.me/972526336363?text=היי%20גולי%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c0 .2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.1.5.1.7-.1l1.1-1.3c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
           לוואטסאפ של גולי
@@ -555,11 +553,20 @@
     document.documentElement.className = 'theme-c pal-' + pal;
     try { localStorage.setItem('guli-pal2', pal); } catch (e) {}
     document.querySelectorAll('.dp-dot').forEach(b => b.classList.toggle('active', b.dataset.pal === pal));
+    const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', bg);
   }
   toggle.addEventListener('click', () => {
     const open = panel.hidden;
     panel.hidden = !open;
     toggle.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !panel.hidden) {
+      panel.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
   });
   document.querySelectorAll('.dp-dot').forEach(b => b.addEventListener('click', () => applyDesign(b.dataset.pal)));
   applyDesign(currentPal());
@@ -584,10 +591,10 @@
         body: JSON.stringify({ access_key: KEY, subject: 'פנייה חדשה מהאתר של גולי', ...data })
       });
       status.textContent = r.ok ? 'הפרטים נשלחו! גולי תחזור אלייך בהקדם 🌸'
-                                : 'משהו השתבש — אפשר פשוט לכתוב לנו בוואטסאפ';
+                                : 'משהו השתבש. אפשר פשוט לכתוב לנו בוואטסאפ';
       if (r.ok) f.reset();
     } catch {
-      status.textContent = 'משהו השתבש — אפשר פשוט לכתוב לנו בוואטסאפ';
+      status.textContent = 'משהו השתבש. אפשר פשוט לכתוב לנו בוואטסאפ';
     }
   });
 </script>
