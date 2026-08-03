@@ -225,6 +225,12 @@
   .dp-style.active { background: var(--deep); color: #fff; border-color: var(--deep); }
   .dp-dot { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--bg); box-shadow: 0 0 0 1px var(--line); cursor: pointer; }
   .dp-dot.active { box-shadow: 0 0 0 2px var(--deep); }
+  @keyframes toggle-pulse {
+    0%, 100% { box-shadow: 0 4px 14px rgba(0,0,0,.12); }
+    50% { box-shadow: 0 0 0 12px color-mix(in srgb, var(--deep) 30%, transparent); }
+  }
+  .theme-toggle { animation: toggle-pulse 1.6s ease 1.2s 3; }
+  @media (prefers-reduced-motion: reduce) { .theme-toggle { animation: none; } }
 
   @media (max-width: 820px) {
     section { padding: 44px 16px; }
@@ -531,7 +537,7 @@
     <button type="button" class="dp-dot" data-pal="night" style="background:#1A1D21" aria-label="לילה" title="לילה"></button>
   </div>
 </div>
-<button class="theme-toggle" id="theme-toggle" aria-expanded="false" aria-controls="design-panel">🎨 עיצוב</button>
+<button class="theme-toggle" id="theme-toggle" aria-expanded="false" aria-controls="design-panel">🎨 צבעים</button>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
