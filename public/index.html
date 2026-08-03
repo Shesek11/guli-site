@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" class="theme-a">
+<html lang="he" dir="rtl" class="theme-c pal-night">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;600&family=Assistant:wght@300;400;600&family=Bellefair&family=Alef&display=swap" rel="stylesheet">
-<script>try{var sp=new URLSearchParams(location.search),qs=sp.get('theme'),qp=sp.get('pal');var st=(qs==='a'||qs==='c')?qs:(localStorage.getItem('guli-style')||localStorage.getItem('guli-theme')||'a');var PALS=['ivory','mist','rose','gold','sage','wine','night'];var pal=PALS.indexOf(qp)>-1?qp:(localStorage.getItem('guli-pal')||(st==='c'?'mist':'ivory'));document.documentElement.className='theme-'+st+' pal-'+pal;localStorage.setItem('guli-style',st);localStorage.setItem('guli-pal',pal)}catch(e){}</script>
+<script>try{var qp=new URLSearchParams(location.search).get('pal');var PALS=['ivory','mist','rose','gold','sage','wine','night'];var pal=PALS.indexOf(qp)>-1?qp:(localStorage.getItem('guli-pal2')||'night');document.documentElement.className='theme-c pal-'+pal;localStorage.setItem('guli-pal2',pal)}catch(e){}</script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -523,18 +523,14 @@
 
 <!-- TODO: קיבוע עיצוב סופי — למחוק את הפאנל, הכפתור והסקריפט שלהם -->
 <div class="design-panel" id="design-panel" hidden>
-  <div class="dp-row" role="group" aria-label="סגנון">
-    <button type="button" class="dp-style" data-style="a">קלאסי</button>
-    <button type="button" class="dp-style" data-style="c">אוורירי</button>
-  </div>
   <div class="dp-row" role="group" aria-label="פלטת צבעים">
+    <button type="button" class="dp-dot" data-pal="night" style="background:#1A1D21" aria-label="לילה" title="לילה"></button>
     <button type="button" class="dp-dot" data-pal="ivory" style="background:#B59D7E" aria-label="שנהב" title="שנהב"></button>
     <button type="button" class="dp-dot" data-pal="mist" style="background:#A99AA0" aria-label="ערפל" title="ערפל"></button>
     <button type="button" class="dp-dot" data-pal="rose" style="background:#A0524A" aria-label="ורד עתיק" title="ורד עתיק"></button>
     <button type="button" class="dp-dot" data-pal="gold" style="background:#CBA95B" aria-label="זהב חם" title="זהב חם"></button>
     <button type="button" class="dp-dot" data-pal="sage" style="background:#4E6B42" aria-label="מרווה" title="מרווה"></button>
     <button type="button" class="dp-dot" data-pal="wine" style="background:#7A2F44" aria-label="יין" title="יין"></button>
-    <button type="button" class="dp-dot" data-pal="night" style="background:#1A1D21" aria-label="לילה" title="לילה"></button>
   </div>
 </div>
 <button class="theme-toggle" id="theme-toggle" aria-expanded="false" aria-controls="design-panel">🎨 צבעים</button>
@@ -551,15 +547,13 @@
 
   const panel = document.getElementById('design-panel');
   const toggle = document.getElementById('theme-toggle');
-  function currentDesign() {
-    const s = document.documentElement.className.match(/theme-(\w)/);
+  function currentPal() {
     const p = document.documentElement.className.match(/pal-(\w+)/);
-    return [s ? s[1] : 'a', p ? p[1] : 'ivory'];
+    return p ? p[1] : 'night';
   }
-  function applyDesign(style, pal) {
-    document.documentElement.className = 'theme-' + style + ' pal-' + pal;
-    try { localStorage.setItem('guli-style', style); localStorage.setItem('guli-pal', pal); } catch (e) {}
-    document.querySelectorAll('.dp-style').forEach(b => b.classList.toggle('active', b.dataset.style === style));
+  function applyDesign(pal) {
+    document.documentElement.className = 'theme-c pal-' + pal;
+    try { localStorage.setItem('guli-pal2', pal); } catch (e) {}
     document.querySelectorAll('.dp-dot').forEach(b => b.classList.toggle('active', b.dataset.pal === pal));
   }
   toggle.addEventListener('click', () => {
@@ -567,9 +561,8 @@
     panel.hidden = !open;
     toggle.setAttribute('aria-expanded', String(open));
   });
-  document.querySelectorAll('.dp-style').forEach(b => b.addEventListener('click', () => applyDesign(b.dataset.style, currentDesign()[1])));
-  document.querySelectorAll('.dp-dot').forEach(b => b.addEventListener('click', () => applyDesign(currentDesign()[0], b.dataset.pal)));
-  applyDesign(...currentDesign());
+  document.querySelectorAll('.dp-dot').forEach(b => b.addEventListener('click', () => applyDesign(b.dataset.pal)));
+  applyDesign(currentPal());
 
   const KEY = 'YOUR_WEB3FORMS_KEY'; // TODO: מפתח אמיתי כשיוחלט מייל העסק
   document.getElementById('lead-form').addEventListener('submit', async (e) => {
