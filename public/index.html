@@ -17,6 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Alef&display=swap" rel="stylesheet">
 <script>try{var qp=new URLSearchParams(location.search).get('pal');var PALS=['ivory','mist','rose','gold','sage','wine','night'];var pal=PALS.indexOf(qp)>-1?qp:(localStorage.getItem('guli-pal2')||'night');document.documentElement.className='theme-c pal-'+pal;localStorage.setItem('guli-pal2',pal)}catch(e){}</script>
 <style>
+  /* impeccable-disable gpt-thin-border-wide-shadow -- polaroid metaphor: paper hairline edge + soft lift is the airy style's committed signature */
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html.theme-c {
@@ -49,7 +50,7 @@
   h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
   h2 { font-size: clamp(30px, 4.2vw, 54px); text-align: center; margin-bottom: 8px; }
   h2.ruled::after { content: ""; display: block; width: 56px; height: 1px; background: var(--accent); margin: 14px auto 0; }
-  .sub-h { text-align: center; color: var(--muted); margin-bottom: 36px; }
+  .sub-h { text-align: center; color: var(--muted); max-width: 62ch; margin-inline: auto; margin-bottom: 36px; }
   section { padding: 56px 20px; }
   .wrap { max-width: 1060px; margin-inline: auto; }
   img { max-width: 100%; display: block; }
@@ -152,7 +153,7 @@
   .quote-band .wrap { position: relative; }
   .quote-band blockquote {
     font-family: var(--font-display); font-size: clamp(24px, 3.4vw, 42px);
-    line-height: 1.25; max-width: 21ch; margin: 0 auto 26px;
+    line-height: 1.35; max-width: 21ch; margin: 0 auto 26px;
   }
   /* about */
   .about .wrap { max-width: 640px; text-align: center; }
