@@ -5,76 +5,82 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>גולי · פרח של אהבה | זרי כלה מתחרה ופנינים</title>
 <meta name="description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. מזכרת שנשארת לתמיד. גולי · פרח של אהבה.">
-<meta name="theme-color" content="#FDFBF7">
+<meta name="theme-color" content="#211517">
 <meta property="og:title" content="גולי · פרח של אהבה | זרי כלה מתחרה ופנינים">
 <meta property="og:description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. מזכרת שנשארת לתמיד.">
 <meta property="og:image" content="https://guli-flower.wp1.host/assets/img/og.jpg">
-<meta property="og:url" content="https://guli-flower.wp1.host/editorial.html">
+<meta property="og:url" content="https://guli-flower.wp1.host/rose.html">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Alef&display=swap" rel="stylesheet">
 <style>
+  /* impeccable-disable gpt-thin-border-wide-shadow -- soft elevation is this direction's committed look */
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
-    --bg:#FDFBF7; --block:#F6F1E8; --quote:#F1EADE; --line:#E4D9C6; --border:#DCCDB4;
-    --text:#2C2A29; --body:#4A4239; --muted:#746753; --num:#B59D7E;
-    --bronze:#8A6F4D; --link:#8A6F4D; --field-bg:#fff;
+    --bg:#211517; --panel:#281B1E; --line:#3A2A2E; --text:#F5EDEB; --head:#F9F2F0;
+    --muted:#A89093; --soft:#C9B2B0; --accent:#D9A79B; --link:#EAD0C8;
+    --cta-bg:#EAD0C8; --cta-text:#2A1518; --field-bg:#2A1C1F; --deep:#A0524A;
   }
   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   body {
-    background: var(--bg); color: var(--body);
-    font-family: 'Alef', sans-serif; font-size: 17px; line-height: 1.6;
+    background: var(--bg); color: var(--text);
+    font-family: 'Alef', sans-serif; font-size: 17px; line-height: 1.55;
     padding-bottom: 96px;
   }
-  h1, h2, h3 { font-family: 'Bellefair', serif; font-weight: 400; color: var(--text); }
+  h1, h2, h3 { font-family: 'Bellefair', serif; font-weight: 400; color: var(--head); }
   a { color: var(--link); text-decoration: none; }
   img { display: block; max-width: 100%; }
-  .wrap { max-width: 760px; margin-inline: auto; padding-inline: 24px; }
-  .kicker { font-size: 12px; letter-spacing: .3em; color: var(--muted); }
+  .wrap { max-width: 720px; margin-inline: auto; padding-inline: 24px; }
+  .kicker { font-size: 12px; letter-spacing: .28em; color: var(--muted); }
   .skip-link {
     position: fixed; top: 0; inset-inline-start: 12px; z-index: 60;
-    background: var(--bronze); color: #fff; padding: 10px 18px;
+    background: var(--cta-bg); color: var(--cta-text); padding: 10px 18px;
     border-radius: 0 0 10px 10px; transform: translateY(-130%); transition: transform .2s ease;
   }
   .skip-link:focus-visible { transform: translateY(0); }
   .btn {
-    display: block; text-align: center; background: var(--bronze); color: #fff;
+    display: block; text-align: center; background: var(--cta-bg); color: var(--cta-text);
     padding: 16px 28px; border-radius: 999px; font-size: 16.5px; border: none; cursor: pointer;
     font-family: inherit; transition: transform .18s ease, filter .18s ease; width: 100%;
   }
-  .btn:hover { transform: translateY(-2px); filter: brightness(1.06); }
-  .btn-line { display: block; text-align: center; border: 1px solid var(--border); color: var(--bronze); padding: 15px 26px; border-radius: 999px; font-size: 15.5px; }
-  :focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; border-radius: 4px; }
+  .btn:hover { transform: translateY(-2px); filter: brightness(1.04); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-  header.top { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px 10px; max-width: 900px; margin-inline: auto; }
-  .brand { font-family: 'Bellefair', serif; font-size: 18px; color: var(--bronze); }
-  header.top a.wa-link { font-size: 13.5px; border-bottom: 1px solid var(--border); padding-bottom: 2px; }
+  /* hero */
+  .hero { position: relative; min-height: 92svh; display: flex; flex-direction: column; justify-content: flex-end; }
+  .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 22%; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(to top, #211517 4%, rgba(33,21,23,.72) 30%, rgba(33,21,23,.1) 58%, rgba(33,21,23,.28));
+  }
+  .hero-top {
+    position: absolute; top: 0; right: 0; left: 0; z-index: 2;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px 40px;
+    background: linear-gradient(to bottom, rgba(33,21,23,.78), rgba(33,21,23,.42) 55%, rgba(33,21,23,0));
+  }
+  .brand { font-family: 'Bellefair', serif; font-size: 18px; color: var(--head); }
+  .hero-body { position: relative; z-index: 2; padding: 0 24px 30px; max-width: 720px; margin-inline: auto; width: 100%; }
+  .hero h1 { font-size: clamp(52px, 9vw, 92px); line-height: 1.02; margin-top: 10px; }
+  .hero-body p { font-size: 17px; color: var(--soft); margin-top: 12px; max-width: 32ch; }
+  .hero-meta { display: flex; justify-content: center; gap: 16px; margin-top: 12px; font-size: 13px; color: var(--muted); }
+  .hero .btn { margin-top: 20px; }
 
-  .hero-head { padding: 26px 24px 0; max-width: 900px; margin-inline: auto; }
-  .hero-head h1 { font-size: clamp(64px, 11vw, 120px); line-height: .96; margin-top: 10px; }
-  .hero-head h1 em { font-style: normal; color: var(--bronze); }
-  .hero-img { margin-top: 22px; }
-  .hero-img img { width: 100%; height: clamp(340px, 56vh, 560px); object-fit: cover; object-position: center 20%; }
-  .cap-row { display: flex; justify-content: space-between; padding: 8px 24px 0; max-width: 900px; margin-inline: auto; font-size: 12.5px; color: var(--muted); }
-  .lede { font-size: clamp(18px, 2.4vw, 21px); color: var(--body); max-width: 46ch; }
-  .hero-cta { max-width: 460px; }
-  .under-cta { font-size: 13.5px; color: var(--muted); text-align: center; margin-top: 10px; }
+  section { padding: 44px 0; }
+  .rows { display: grid; margin-top: 18px; }
+  .row { display: flex; gap: 16px; align-items: baseline; padding: 15px 0; border-bottom: 1px solid var(--line); }
+  .row:last-child { border-bottom: none; }
+  .row .num { font-family: 'Bellefair', serif; font-size: 26px; color: var(--accent); min-width: 30px; }
+  .row strong { display: block; font-size: 17px; font-weight: 400; color: var(--text); }
+  .row span { display: block; font-size: 14.5px; color: var(--muted); }
+  .note { font-size: 14.5px; color: var(--muted); margin-top: 16px; }
 
-  section { padding: 40px 0; }
-  .block { background: var(--block); }
-  .sec-head { display: flex; align-items: baseline; gap: 12px; }
-  .sec-head .range { font-family: 'Bellefair', serif; font-size: 15px; color: var(--muted); }
-  .sec-head h2 { font-size: clamp(30px, 5vw, 42px); }
-  .steps { display: grid; gap: 18px; margin-top: 22px; }
-  @media (min-width: 720px) { .steps { grid-template-columns: 1fr 1fr; gap: 22px 44px; } }
-  .step { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: baseline; }
-  .step .num { font-family: 'Bellefair', serif; font-size: 22px; color: var(--num); }
-  .step strong { display: block; font-family: 'Bellefair', serif; font-weight: 400; font-size: 21px; color: var(--text); }
-  .step span { display: block; font-size: 14.5px; color: var(--body); }
-  .note { font-size: 14px; color: var(--muted); margin-top: 18px; }
-
-  .col-sub { font-size: 15px; color: var(--body); margin-top: 4px; max-width: 52ch; }
+  /* collection: editorial duos on the dark rose world */
+  .col-head { display: flex; align-items: baseline; justify-content: space-between; }
+  .col-head h2 { font-size: clamp(30px, 5vw, 40px); }
+  .col-head small { font-size: 12.5px; color: var(--muted); }
+  .col-sub { font-size: 14.5px; color: var(--muted); margin-top: 6px; max-width: 52ch; }
   .models { display: grid; gap: 34px; margin-top: 24px; }
   .model .duo { display: grid; gap: 8px; }
   .model:nth-child(odd) .duo { grid-template-columns: 1.55fr 1fr; }
@@ -82,53 +88,54 @@
   .model .duo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
   .model:nth-child(odd) .duo img.real { align-self: end; }
   .model:nth-child(even) .duo img.real { align-self: start; }
-  .model .row { display: flex; align-items: baseline; justify-content: space-between; margin-top: 10px; }
-  .model .row strong { font-family: 'Bellefair', serif; font-weight: 400; font-size: 24px; color: var(--text); }
-  .model .row a { font-size: 14.5px; }
-  .model .desc { font-size: 14.5px; color: var(--muted); }
   .duo-caps { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 5px; }
+  .model .m-row { display: flex; align-items: baseline; justify-content: space-between; margin-top: 10px; }
+  .model .m-row strong { font-family: 'Bellefair', serif; font-weight: 400; font-size: 24px; color: var(--head); }
+  .model .m-row a { font-size: 14.5px; }
+  .model .desc { font-size: 14.5px; color: var(--muted); }
 
-  .quote-band { position: relative; background: var(--quote); overflow: hidden; padding: 46px 24px 50px; }
-  .quote-band img.tex { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .2; }
-  .quote-band .inner { position: relative; max-width: 760px; margin-inline: auto; }
-  .quote-band p { font-family: 'Bellefair', serif; font-size: clamp(28px, 4.5vw, 42px); line-height: 1.28; color: var(--text); max-width: 26ch; }
-  .quote-band .btn { display: inline-block; width: auto; margin-top: 22px; padding: 15px 30px; }
+  /* quote */
+  .quote { position: relative; background: var(--panel); overflow: hidden; text-align: center; padding: 48px 24px 52px; }
+  .quote img.tex { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .11; }
+  .quote p { position: relative; font-family: 'Bellefair', serif; font-size: clamp(28px, 4.5vw, 40px); line-height: 1.28; color: var(--head); max-width: 24ch; margin-inline: auto; }
+  .quote .btn { position: relative; max-width: 300px; margin: 24px auto 0; }
 
-  .about p { font-size: 17px; max-width: 56ch; margin-top: 8px; }
-  .duo-btns { display: flex; gap: 10px; margin-top: 20px; max-width: 460px; }
-  .duo-btns a { flex: 1; text-align: center; padding: 15px; border-radius: 999px; font-size: 15.5px; }
-  .duo-btns .wa { background: var(--bronze); color: #fff; }
-  .duo-btns .tel { border: 1px solid var(--border); color: var(--bronze); }
-
-  .faq h2 { font-size: clamp(28px, 4.5vw, 38px); }
+  /* faq */
+  .faq h2 { font-size: clamp(28px, 4.5vw, 36px); }
   .faq-item { border-top: 1px solid var(--line); padding: 14px 0; margin-top: 14px; }
   .faq-item strong { display: block; font-family: 'Bellefair', serif; font-weight: 400; font-size: 21px; color: var(--text); }
-  .faq-item p { font-size: 15px; color: var(--body); margin-top: 4px; }
+  .faq-item p { font-size: 15px; color: var(--muted); margin-top: 4px; }
 
-  .contact h2 { font-size: clamp(28px, 4.5vw, 38px); }
+  /* about + contact */
+  .about p { font-size: 16.5px; color: var(--soft); max-width: 54ch; }
+  .contact h2 { font-size: clamp(28px, 4.5vw, 36px); }
   .contact .lead { color: var(--muted); font-size: 15.5px; margin-top: 6px; }
-  form { display: grid; gap: 14px; margin-top: 22px; max-width: 520px; }
-  label { font-size: 14.5px; color: var(--body); }
+  form { display: grid; gap: 14px; margin-top: 22px; }
+  label { font-size: 14.5px; color: var(--soft); }
   input, textarea {
     width: 100%; margin-top: 6px; padding: 13px 15px; font: inherit; color: var(--text);
     background: var(--field-bg); border: 1px solid var(--line); border-radius: 12px;
   }
   textarea { min-height: 90px; resize: vertical; }
-  #form-status { font-size: 15px; color: var(--bronze); min-height: 1.4em; }
+  #form-status { font-size: 15px; color: var(--link); min-height: 1.4em; }
+  .direct { display: flex; gap: 10px; margin-top: 18px; }
+  .direct a { flex: 1; text-align: center; padding: 14px; border-radius: 999px; font-size: 15px; }
+  .direct .wa { background: var(--cta-bg); color: var(--cta-text); }
+  .direct .tel { border: 1px solid var(--line); color: var(--link); }
 
-  footer { text-align: center; padding: 16px 24px 40px; }
-  footer .brand { font-size: 19px; }
+  footer { text-align: center; padding: 20px 24px 40px; }
+  footer .brand { font-size: 19px; color: var(--accent); }
   footer p { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
 
   .dir-switch {
     position: fixed; bottom: 0; right: 0; left: 0; z-index: 50;
     display: flex; align-items: center; justify-content: center; gap: 8px;
     padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-    background: rgba(253,251,247,.94); backdrop-filter: blur(8px); border-top: 1px solid var(--line);
+    background: rgba(33,21,23,.92); backdrop-filter: blur(8px); border-top: 1px solid var(--line);
   }
   .dir-switch .ds-label { font-size: 13px; color: var(--muted); margin-inline-end: 6px; }
-  .dir-switch a { font-size: 15px; padding: 8px 20px; border-radius: 999px; border: 1px solid var(--border); color: var(--bronze); }
-  .dir-switch a[aria-current="page"] { background: var(--bronze); color: #fff; border-color: var(--bronze); }
+  .dir-switch a { font-size: 15px; padding: 8px 18px; border-radius: 999px; border: 1px solid var(--line); color: var(--soft); }
+  .dir-switch a[aria-current="page"] { background: var(--cta-bg); color: var(--cta-text); border-color: var(--cta-bg); }
 
   .reveal { opacity: 0; translate: 0 18px; transition: opacity .6s ease, translate .6s ease; }
   .reveal.in { opacity: 1; translate: 0 0; }
@@ -143,45 +150,39 @@
 
 <a class="skip-link" href="#main">דילוג לתוכן</a>
 
-<header class="top">
-  <span class="brand">גולי · פרח של אהבה</span>
-  <a class="wa-link" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">וואטסאפ</a>
-</header>
-
 <main id="main">
-  <section style="padding:0">
-    <div class="hero-head">
-      <span class="kicker">זרי כלה נצחיים</span>
-      <h1>זר כלה<br><em>שנשאר</em><br>לתמיד</h1>
+  <section class="hero" style="padding:0">
+    <img src="assets/img/hero.webp" alt="כלה מחזיקה זר פנינים בעבודת יד, תמונת המחשה" fetchpriority="high">
+    <div class="hero-top">
+      <span class="brand">גולי · פרח של אהבה</span>
+      <a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">וואטסאפ</a>
     </div>
-    <div class="hero-img"><img src="assets/img/gallery-1.webp" alt="כלה מחזיקה זר שושן תחרה, תמונת המחשה" fetchpriority="high"></div>
-    <div class="cap-row"><span>שושן תחרה</span><span>תמונת המחשה</span></div>
-    <div class="wrap" style="padding-top:22px;padding-bottom:34px">
-      <p class="lede">תחרה, אורגנזה ופנינים: נרקמים ידנית לזר אחד בעולם, בהתאמה לשמלה ולסיפור שלך.</p>
-      <div class="hero-cta">
-        <a class="btn" style="margin-top:20px" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">לפרטים בוואטסאפ</a>
-        <p class="under-cta">052-6336363 · מענה תוך יום · מגיע באריזת מתנה</p>
-      </div>
+    <div class="hero-body">
+      <span class="kicker">תמונת המחשה</span>
+      <h1>זר כלה<br>שנשאר לתמיד</h1>
+      <p>תחרה, אורגנזה ופנינים. נרקם ידנית בהזמנה אישית, ונשאר איתך גם ביום הנישואין העשירי.</p>
+      <a class="btn" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">לפרטים בוואטסאפ</a>
+      <div class="hero-meta"><span>052-6336363</span><span>·</span><span>מענה תוך יום</span><span>·</span><span>מגיע באריזת מתנה</span></div>
     </div>
   </section>
 
-  <section class="block">
+  <section class="process">
     <div class="wrap">
-      <div class="sec-head"><span class="range" dir="ltr">01–04</span><h2>איך זה עובד</h2></div>
-      <div class="steps">
-        <div class="step"><span class="num">01</span><div><strong>שיחת היכרות</strong><span>מספרת לי על השמלה, הגוונים והסגנון</span></div></div>
-        <div class="step"><span class="num">02</span><div><strong>בחירת דגם ותחרה</strong><span>שולחת דוגמאות פנינים ותחרה לאישור</span></div></div>
-        <div class="step"><span class="num">03</span><div><strong>רקימה ידנית</strong><span>כשלושה שבועות עבודה, פנינה אחר פנינה</span></div></div>
-        <div class="step"><span class="num">04</span><div><strong>אריזה ומסירה</strong><span>באריזת מתנה שקופה, מוכן לצילומי הבוקר</span></div></div>
+      <span class="kicker">איך זה עובד</span>
+      <div class="rows">
+        <div class="row"><span class="num">01</span><div><strong>שיחת היכרות בוואטסאפ</strong><span>מספרת לי על השמלה והסגנון</span></div></div>
+        <div class="row"><span class="num">02</span><div><strong>בוחרות דגם, תחרה וגוון פנינים</strong><span>אני שולחת דוגמאות לאישור</span></div></div>
+        <div class="row"><span class="num">03</span><div><strong>רקימה ידנית · כשלושה שבועות</strong><span>פנינה אחר פנינה, רק שלך</span></div></div>
+        <div class="row"><span class="num">04</span><div><strong>מסירה באריזת מתנה</strong><span>מוכן לצילומים של הבוקר</span></div></div>
       </div>
-      <p class="note">כלות מזמינות 4–8 שבועות לפני האירוע. תאריך קרוב? כתבי לי בכל זאת.</p>
+      <p class="note">מזמינות בדרך כלל 4–8 שבועות לפני האירוע. יש תאריך קרוב? כתבי לי, נמצא פתרון.</p>
     </div>
   </section>
 
   <section class="collection" id="collection">
     <div class="wrap">
-      <h2 style="font-size:clamp(32px,5vw,44px)">הקולקציה</h2>
-      <p class="col-sub">שבעה דגמים. ליד כל הדמיה, הצילום האמיתי של אותו זר, בלי עריכה.</p>
+      <div class="col-head"><h2>הקולקציה</h2><small>7 דגמים</small></div>
+      <p class="col-sub">ליד כל הדמיה, הצילום האמיתי של אותו זר, בלי עריכה.</p>
       <div class="models">
         <div class="model">
           <div class="duo">
@@ -189,7 +190,7 @@
             <img class="real" src="assets/img/real-lacepearl.webp" alt="עלי תחרה רקומה בשולי פנינים, צילום אמיתי" loading="lazy">
           </div>
           <div class="duo-caps"><span>הדמיה</span><span>צילום אמיתי</span></div>
-          <div class="row"><strong>שושן תחרה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20שושן%20תחרה">רוצה כזה ←</a></div>
+          <div class="m-row"><strong>שושן תחרה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20שושן%20תחרה">רוצה כזה ←</a></div>
           <span class="desc">עלי תחרה רקומה בשוליים מוזהבים</span>
         </div>
         <div class="model">
@@ -198,7 +199,7 @@
             <img src="assets/img/bride-lace.webp" alt="כלה מחזיקה זר Pearl Lace, הדמיה" loading="lazy">
           </div>
           <div class="duo-caps"><span>צילום אמיתי</span><span>הדמיה</span></div>
-          <div class="row"><strong>Pearl Lace</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Lace">רוצה כזה ←</a></div>
+          <div class="m-row"><strong>Pearl Lace</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Lace">רוצה כזה ←</a></div>
           <span class="desc">פפיון תחרה עם שולי פנינים וסרטים</span>
         </div>
         <div class="model">
@@ -207,7 +208,7 @@
             <img class="real" src="assets/img/real-elegance-day.webp" alt="פרח פנינים מלא באור יום, צילום אמיתי" loading="lazy">
           </div>
           <div class="duo-caps"><span>הדמיה</span><span>צילום אמיתי</span></div>
-          <div class="row"><strong>Pearl Elegance</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Elegance">רוצה כזה ←</a></div>
+          <div class="m-row"><strong>Pearl Elegance</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Elegance">רוצה כזה ←</a></div>
           <span class="desc">פרח פנינים מלא, כולו נצנוץ</span>
         </div>
         <div class="model">
@@ -216,7 +217,7 @@
             <img src="assets/img/bride-dream.webp" alt="כלה מחזיקה זר Pearl Dream, הדמיה" loading="lazy">
           </div>
           <div class="duo-caps"><span>צילום אמיתי</span><span>הדמיה</span></div>
-          <div class="row"><strong>Pearl Dream</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Dream">רוצה כזה ←</a></div>
+          <div class="m-row"><strong>Pearl Dream</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Dream">רוצה כזה ←</a></div>
           <span class="desc">עלי אורגנזה שקופים בקווי מתאר של פנינים</span>
         </div>
         <div class="model">
@@ -225,7 +226,7 @@
             <img class="real" src="assets/img/real-orchid-day.webp" alt="מפל סחלבים ופנינים על אגרטל, צילום אמיתי" loading="lazy">
           </div>
           <div class="duo-caps"><span>הדמיה</span><span>צילום אמיתי</span></div>
-          <div class="row"><strong>Pearl Orchid</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Orchid">רוצה כזה ←</a></div>
+          <div class="m-row"><strong>Pearl Orchid</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Orchid">רוצה כזה ←</a></div>
           <span class="desc">מפל סחלבים משי עם שרשראות פנינים</span>
         </div>
         <div class="model">
@@ -234,7 +235,7 @@
             <img src="assets/img/bride-rose.webp" alt="כלה מחזיקה ורד תחרה, הדמיה" loading="lazy">
           </div>
           <div class="duo-caps"><span>צילום אמיתי</span><span>הדמיה</span></div>
-          <div class="row"><strong>ורד תחרה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20תחרה">רוצה כזה ←</a></div>
+          <div class="m-row"><strong>ורד תחרה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20תחרה">רוצה כזה ←</a></div>
           <span class="desc">שכבות תחרה רקומה עם אבקני פנינים</span>
         </div>
         <div class="model">
@@ -243,29 +244,23 @@
             <img class="real" src="assets/img/real-calla.webp" alt="קאלה מאורגנזה שקופה, צילום אמיתי" loading="lazy">
           </div>
           <div class="duo-caps"><span>הדמיה</span><span>צילום אמיתי</span></div>
-          <div class="row"><strong>קאלה מאורגנזה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20קאלה%20מאורגנזה">רוצה כזה ←</a></div>
+          <div class="m-row"><strong>קאלה מאורגנזה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20קאלה%20מאורגנזה">רוצה כזה ←</a></div>
           <span class="desc">קאלה עדינה מעלי אורגנזה בקו מינימלי</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="quote-band">
+  <section class="quote" style="padding-inline:24px">
     <img class="tex" src="assets/img/texture.webp" alt="">
-    <div class="inner">
-      <p>זר מפרחים חיים נובל אחרי יום. שלך יישאר גם ביום הנישואין העשירי.</p>
-      <a class="btn" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">דברי איתי על הזר שלך</a>
-    </div>
+    <p>זר מפרחים חיים נובל אחרי יום. שלך יישאר על המדף.</p>
+    <a class="btn" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">דברי איתי על הזר שלך</a>
   </section>
 
   <section class="about" id="about">
     <div class="wrap">
-      <h2 style="font-size:clamp(28px,4.5vw,38px)">מי מאחורי הפרחים</h2>
-      <p>גאולה יוצרת זרי כלה בעבודת יד, פרח אחר פרח: תחרה, אורגנזה ופנינים שנארגים לזר שנשאר איתך גם אחרי החתונה. פרח של אהבה נולד מהאמונה שדבר שנעשה באהבה צריך להישאר לתמיד.</p>
-      <div class="duo-btns">
-        <a class="wa" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">וואטסאפ</a>
-        <a class="tel" href="tel:+972526336363">052-6336363</a>
-      </div>
+      <span class="kicker">מי מאחורי הפרחים</span>
+      <p style="margin-top:12px">גאולה יוצרת זרי כלה בעבודת יד, פרח אחר פרח: תחרה, אורגנזה ופנינים שנארגים לזר שנשאר איתך גם אחרי החתונה. כל זר נתפר בהתאמה אישית לכלה: לשמלה, לסגנון, לסיפור שלה.</p>
     </div>
   </section>
 
@@ -278,7 +273,7 @@
     </div>
   </section>
 
-  <section class="contact block" id="contact">
+  <section class="contact" id="contact">
     <div class="wrap">
       <h2>דברו איתי</h2>
       <p class="lead">מלאי פרטים וגאולה תחזור אלייך, או פשוט כתבי בוואטסאפ</p>
@@ -290,6 +285,10 @@
         <button class="btn" type="submit">שלחו לי פרטים</button>
         <p id="form-status" role="status" aria-live="polite"></p>
       </form>
+      <div class="direct">
+        <a class="wa" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">לוואטסאפ של גאולה</a>
+        <a class="tel" href="tel:+972526336363">052-6336363</a>
+      </div>
     </div>
   </section>
 </main>
@@ -302,9 +301,9 @@
 <nav class="dir-switch" aria-label="בחירת כיוון עיצוב">
   <span class="ds-label">כיוון עיצוב:</span>
   <a href="index.html">לילה</a>
-  <a href="editorial.html" aria-current="page">מגזין</a>
+  <a href="editorial.html">מגזין</a>
   <a href="gallery.html">גלריה</a>
-  <a href="rose.html">ורוד</a>
+  <a href="rose.html" aria-current="page">ורוד</a>
 </nav>
 
 <script>
@@ -314,7 +313,7 @@
     const io = new IntersectionObserver((entries) => {
       entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
     }, { threshold: 0.1 });
-    document.querySelectorAll('main section .wrap, .model, .quote-band .inner').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+    document.querySelectorAll('main section .wrap, .quote p, .model').forEach(el => { el.classList.add('reveal'); io.observe(el); });
   }
 
   const form = document.getElementById('lead-form');
