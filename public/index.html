@@ -1,249 +1,156 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl" class="theme-c pal-night">
+<html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>גולי · פרח של אהבה | זרי כלה מתחרה ופנינים</title>
 <meta name="description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. מזכרת שנשארת לתמיד. גולי · פרח של אהבה.">
-<meta name="theme-color" content="#1A1D21">
-<meta property="og:type" content="website">
+<meta name="theme-color" content="#0F0D0C">
 <meta property="og:title" content="גולי · פרח של אהבה | זרי כלה מתחרה ופנינים">
 <meta property="og:description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. מזכרת שנשארת לתמיד.">
 <meta property="og:image" content="https://guli-flower.wp1.host/assets/img/og.jpg">
 <meta property="og:url" content="https://guli-flower.wp1.host/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌸%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Alef&display=swap" rel="stylesheet">
-<script>try{var qp=new URLSearchParams(location.search).get('pal');var PALS=['ivory','mist','rose','gold','sage','wine','night'];var pal=PALS.indexOf(qp)>-1?qp:(localStorage.getItem('guli-pal2')||'night');document.documentElement.className='theme-c pal-'+pal;localStorage.setItem('guli-pal2',pal)}catch(e){}</script>
 <style>
-  /* impeccable-disable gpt-thin-border-wide-shadow -- polaroid metaphor: paper hairline edge + soft lift is the airy style's committed signature */
+  /* impeccable-disable gpt-thin-border-wide-shadow -- soft elevation is this direction's committed look */
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html.theme-c {
-    --bg:#FAF9F9; --text:#5C4B51; --muted:#857278; --accent:#E2DFDB;
-    --deep:#5C4B51; --line:#EDE9E7;
-    --font-display:'Bellefair', serif; --font-body:'Alef', sans-serif;
-    --frame:none; --tilt:-1.2deg; --card-shadow:0 6px 18px rgba(92,75,81,.14); --radius:14px;
+  :root {
+    --bg:#0F0D0C; --panel:#151211; --line:#221F1C; --text:#F1EDE6; --head:#F8F5EF;
+    --muted:#8E8378; --soft:#B4AAA0; --accent:#D9C7BC; --link:#E4D5C7;
+    --cta-bg:#E4D5C7; --cta-text:#14100E; --field-bg:#1A1613; --deep:#8A6F4D;
   }
-
-  /* color palettes: override colors only; fonts/frames stay in theme-c */
-  html.pal-ivory { --bg:#FDFBF7; --text:#2C2A29; --muted:#5C5346; --accent:#B59D7E; --deep:#8A6F4D; --line:#E9E0D2; --field-bg:#fff; }
-  html.pal-mist  { --bg:#FAF9F9; --text:#5C4B51; --muted:#7A6A70; --accent:#E2DFDB; --deep:#5C4B51; --line:#EDE9E7; --field-bg:#fff; }
-  html.pal-rose  { --bg:#FBF3F0; --text:#462B27; --muted:#7A5650; --accent:#D9A79B; --deep:#A0524A; --line:#F0DBD3; --field-bg:#fff; }
-  html.pal-gold  { --bg:#FBF5EA; --text:#3D3421; --muted:#6B5B3E; --accent:#CBA95B; --deep:#82631C; --line:#EDDFC0; --field-bg:#fff; }
-  html.pal-sage  { --bg:#F4F6F1; --text:#2E3A2B; --muted:#5C6B54; --accent:#A9BCA0; --deep:#4E6B42; --line:#DEE6D6; --field-bg:#fff; }
-  html.pal-wine  { --bg:#FBF6F3; --text:#3B222A; --muted:#6E4A55; --accent:#C29AA6; --deep:#7A2F44; --line:#EFDDE2; --field-bg:#fff; }
-  html.pal-night { --bg:#1A1D21; --text:#F2F0EC; --muted:#B7B3AB; --accent:#D9C7BC; --deep:#8A6F4D; --link:#D9C7BC; --line:#31353A; --field-bg:#23272C; }
-
   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Alef', sans-serif; font-size: 17px; line-height: 1.55;
+    padding-bottom: 96px;
+  }
+  h1, h2, h3 { font-family: 'Bellefair', serif; font-weight: 400; color: var(--head); }
+  a { color: var(--link); text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 720px; margin-inline: auto; padding-inline: 24px; }
+  .kicker { font-size: 12px; letter-spacing: .28em; color: var(--muted); }
   .skip-link {
-    position: fixed; top: 0; inset-inline-start: 12px; z-index: 40;
-    background: var(--deep); color: #fff; padding: 10px 18px;
+    position: fixed; top: 0; inset-inline-start: 12px; z-index: 60;
+    background: var(--cta-bg); color: var(--cta-text); padding: 10px 18px;
     border-radius: 0 0 10px 10px; transform: translateY(-130%); transition: transform .2s ease;
   }
   .skip-link:focus-visible { transform: translateY(0); }
-  body {
-    background: var(--bg); color: var(--text);
-    font-family: var(--font-body); font-size: 18px; line-height: 1.55;
-  }
-  h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
-  h2 { font-size: clamp(30px, 4.2vw, 54px); text-align: center; margin-bottom: 8px; }
-  h2.ruled::after { content: ""; display: block; width: 56px; height: 1px; background: var(--accent); margin: 14px auto 0; }
-  .sub-h { text-align: center; color: var(--muted); max-width: 62ch; margin-inline: auto; margin-bottom: 36px; }
-  section { padding: 56px 20px; }
-  .wrap { max-width: 1060px; margin-inline: auto; }
-  img { max-width: 100%; display: block; }
-  a { color: var(--link, var(--deep)); }
-  :focus-visible { outline: 2px solid var(--deep); outline-offset: 2px; }
-
-  .divider { text-align: center; color: var(--accent); font-size: 18px; letter-spacing: .5em; margin: 6px 0 14px; }
-
-  /* header */
-  .site-header {
-    position: sticky; top: 0; z-index: 20;
-    background: color-mix(in srgb, var(--bg) 92%, transparent);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--line);
-  }
-  .site-header .wrap {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 12px; padding: 12px 0; flex-wrap: wrap;
-  }
-  .brand { font-family: var(--font-display); font-size: 20px; color: var(--deep); text-decoration: none; }
-  .site-nav { display: flex; gap: 22px; }
-  .site-nav a { color: var(--muted); text-decoration: none; font-size: 16px; }
-  .site-nav a:hover { color: var(--deep); }
-
-  /* buttons */
   .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-    padding: 13px 28px; border-radius: 999px; text-decoration: none;
-    font-size: 17px; font-family: var(--font-body); border: none; cursor: pointer;
-    transition: transform .18s ease, filter .18s ease;
+    display: block; text-align: center; background: var(--cta-bg); color: var(--cta-text);
+    padding: 16px 28px; border-radius: 999px; font-size: 16.5px; border: none; cursor: pointer;
+    font-family: inherit; transition: transform .18s ease, filter .18s ease; width: 100%;
   }
-  .btn:hover { transform: translateY(-2px); }
-  .btn svg { width: 19px; height: 19px; flex: none; }
-  .btn-main { background: var(--deep); color: #fff; }
-  .btn-main:hover { filter: brightness(1.08); }
-  .btn-sec { border: 1px solid var(--accent); color: var(--link, var(--deep)); background: transparent; }
-  .btn-small { padding: 8px 18px; font-size: 15px; }
+  .btn:hover { transform: translateY(-2px); filter: brightness(1.04); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
   /* hero */
-  .hero { padding-top: 36px; }
-  .hero .wrap {
-    display: grid; grid-template-columns: 1.05fr 1fr;
-    gap: 48px; align-items: center; position: relative;
+  .hero { position: relative; min-height: 92svh; display: flex; flex-direction: column; justify-content: flex-end; }
+  .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 22%; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(to top, #0F0D0C 4%, rgba(15,13,12,.72) 30%, rgba(15,13,12,.1) 58%, rgba(15,13,12,.28));
   }
-  .hero-blob {
-    position: absolute; top: -40px; inset-inline-start: -60px; z-index: -1;
-    width: 380px; height: 380px; border-radius: 50%; filter: blur(48px);
-    background: radial-gradient(circle, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%);
+  .hero-top {
+    position: absolute; top: 0; right: 0; left: 0; z-index: 2;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px 40px;
+    background: linear-gradient(to bottom, rgba(15,13,12,.78), rgba(15,13,12,.42) 55%, rgba(15,13,12,0));
   }
-  .hero-text h1 { font-size: clamp(42px, 6.5vw, 84px); line-height: 1.08; margin-bottom: 18px; }
-  .hero-text p { font-size: clamp(17px, 2vw, 21px); color: var(--muted); margin-bottom: 28px; max-width: 44ch; }
-  .trust-strip {
-    display: flex; gap: 8px 22px; flex-wrap: wrap; margin-top: 26px;
-    color: var(--muted); font-size: 15px;
+  .brand { font-family: 'Bellefair', serif; font-size: 18px; color: var(--head); }
+  .hero-body { position: relative; z-index: 2; padding: 0 24px 30px; max-width: 720px; margin-inline: auto; width: 100%; }
+  .hero h1 { font-size: clamp(52px, 9vw, 92px); line-height: 1.02; margin-top: 10px; }
+  .hero-body p { font-size: 17px; color: var(--soft); margin-top: 12px; max-width: 32ch; }
+  .hero-meta { display: flex; justify-content: center; gap: 16px; margin-top: 12px; font-size: 13px; color: var(--muted); }
+  .hero .btn { margin-top: 20px; }
+
+  section { padding: 44px 0; }
+  .rows { display: grid; margin-top: 18px; }
+  .row { display: flex; gap: 16px; align-items: baseline; padding: 15px 0; border-bottom: 1px solid var(--line); }
+  .row:last-child { border-bottom: none; }
+  .row .num { font-family: 'Bellefair', serif; font-size: 26px; color: var(--accent); min-width: 30px; }
+  .row strong { display: block; font-size: 17px; font-weight: 400; color: var(--text); }
+  .row span { display: block; font-size: 14.5px; color: var(--muted); }
+  .note { font-size: 14.5px; color: var(--muted); margin-top: 16px; }
+
+  /* collection carousel */
+  .col-head { display: flex; align-items: baseline; justify-content: space-between; }
+  .col-head h2 { font-size: clamp(30px, 5vw, 40px); }
+  .col-head small { font-size: 12.5px; color: var(--muted); }
+  .col-sub { font-size: 14.5px; color: var(--muted); margin-top: 6px; max-width: 52ch; }
+  .ph { scrollbar-width: none; }
+  .ph::-webkit-scrollbar { display: none; }
+  .carousel {
+    display: flex; gap: 18px; overflow-x: auto; padding: 20px 24px 8px;
+    scroll-snap-type: x mandatory; max-width: 1200px; margin-inline: auto;
   }
-  .trust-strip span::before { content: "♡ "; color: var(--accent); }
-  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
-  .figure { position: relative; }
-  .figure img { border: var(--frame); border-radius: var(--radius); box-shadow: var(--card-shadow); }
-  .sim-badge {
-    position: absolute; bottom: 10px; inset-inline-start: 10px;
-    background: color-mix(in srgb, var(--bg) 92%, transparent);
-    border: 1px solid var(--line);
-    color: var(--muted); font-size: 13px; padding: 4px 12px; border-radius: 999px;
-  }
-  .hero .figure img { width: 100%; max-height: 76vh; object-fit: cover; object-position: center 30%; aspect-ratio: 3/4; }
+  .card { flex: 0 0 272px; scroll-snap-align: start; }
+  .card > .sim { position: relative; }
+  .card > .sim img { width: 272px; height: 310px; object-fit: cover; }
+  .card .sim-tag { position: absolute; bottom: 8px; inset-inline-start: 8px; font-size: 11px; letter-spacing: .12em; color: #E9E2D8; background: rgba(15,13,12,.55); padding: 3px 9px; border-radius: 999px; }
+  .card .pair { display: flex; gap: 12px; margin-top: 8px; align-items: flex-start; }
+  .card .pair img { width: 92px; height: 92px; object-fit: cover; transform: rotate(-1.6deg); border: 1px solid rgba(255,255,255,.14); }
+  .card .pair strong { display: block; font-family: 'Bellefair', serif; font-weight: 400; font-size: 22px; color: var(--head); }
+  .card .pair span { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+  .card .want { display: inline-block; margin-top: 10px; font-size: 14.5px; }
 
-  /* why */
-  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; text-align: center; }
-  .why-grid svg { width: 34px; height: 34px; stroke: var(--deep); fill: none; stroke-width: 1.5; margin-bottom: 10px; }
-  .why-grid h3 { font-size: 20px; margin-bottom: 4px; }
-  .why-grid p { color: var(--muted); font-size: 15.5px; }
-
-  /* collection */
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(225px, 1fr)); gap: 22px; }
-  .card { display: flex; flex-direction: column; }
-  .card .figure { overflow: hidden; border-radius: var(--radius); }
-  .card .figure img { aspect-ratio: 3/4; object-fit: cover; width: 100%; transform: rotate(var(--tilt)); transition: transform .3s ease; }
-  .card:hover .figure img { transform: rotate(var(--tilt)) scale(1.04); }
-  .card h3 { font-size: 21px; margin: 14px 0 2px; }
-  .card p { color: var(--muted); font-size: 15px; flex: 1; }
-  .card .want { margin-top: 10px; font-size: 15.5px; }
-
-  /* real */
-  .real-grid { columns: 3; column-gap: 22px; }
-  .real-grid .figure { break-inside: avoid; margin-bottom: 22px; }
-  .real-grid .figure img { width: 100%; height: auto; border: var(--frame); border-radius: var(--radius); box-shadow: var(--card-shadow); transform: rotate(var(--tilt)); }
-  html.theme-c .real-grid .figure:nth-child(even) img { transform: rotate(1.1deg); }
-  .real-grid figcaption { font-size: 14px; color: var(--muted); text-align: center; margin: 8px 0 4px; }
-
-  /* moments gallery */
-  .moments-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 22px; align-items: start; }
-  .moments-grid img { aspect-ratio: 3/4; object-fit: cover; width: 100%; border: var(--frame); border-radius: var(--radius); box-shadow: var(--card-shadow); transform: rotate(var(--tilt)); }
-  html.theme-c .moments-grid .figure:nth-child(2) img { transform: rotate(1.1deg); }
-  .moments-grid figcaption { font-size: 14px; color: var(--muted); text-align: center; margin-top: 8px; }
-
-  /* quote band */
-  .quote-band { background: color-mix(in srgb, var(--line) 38%, var(--bg)); text-align: center; position: relative; overflow: hidden; }
-  .quote-band::before { content: ""; position: absolute; inset: 0; background: url('assets/img/texture.webp') center/cover; opacity: .16; }
-  .quote-band .wrap { position: relative; }
-  .quote-band blockquote {
-    font-family: var(--font-display); font-size: clamp(24px, 3.4vw, 42px);
-    line-height: 1.35; max-width: 21ch; margin: 0 auto 26px;
-  }
-  /* about */
-  .about .wrap { max-width: 640px; text-align: center; }
-  .about p { color: var(--muted); font-size: 18px; }
+  /* quote */
+  .quote { position: relative; background: var(--panel); overflow: hidden; text-align: center; padding: 48px 24px 52px; }
+  .quote img.tex { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .13; }
+  .quote p { position: relative; font-family: 'Bellefair', serif; font-size: clamp(28px, 4.5vw, 40px); line-height: 1.28; color: var(--head); max-width: 24ch; margin-inline: auto; }
+  .quote .btn { position: relative; max-width: 300px; margin: 24px auto 0; }
 
   /* faq */
-  .faq .wrap { max-width: 680px; }
-  .faq-item { border-bottom: 1px solid var(--line); padding: 22px 0; }
-  .faq-item h3 { font-size: 22px; margin-bottom: 6px; }
-  .faq-item p { color: var(--muted); }
+  .faq h2 { font-size: clamp(28px, 4.5vw, 36px); }
+  .faq-item { border-top: 1px solid var(--line); padding: 14px 0; margin-top: 14px; }
+  .faq-item strong { display: block; font-family: 'Bellefair', serif; font-weight: 400; font-size: 21px; color: var(--text); }
+  .faq-item p { font-size: 15px; color: var(--muted); margin-top: 4px; }
 
-  /* reveal on scroll — one-time, gentle */
+  /* about + contact */
+  .about p { font-size: 16.5px; color: var(--soft); max-width: 54ch; }
+  .contact h2 { font-size: clamp(28px, 4.5vw, 36px); }
+  .contact .lead { color: var(--muted); font-size: 15.5px; margin-top: 6px; }
+  form { display: grid; gap: 14px; margin-top: 22px; }
+  label { font-size: 14.5px; color: var(--soft); }
+  input, textarea {
+    width: 100%; margin-top: 6px; padding: 13px 15px; font: inherit; color: var(--text);
+    background: var(--field-bg); border: 1px solid var(--line); border-radius: 12px;
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  #form-status { font-size: 15px; color: var(--link); min-height: 1.4em; }
+  .direct { display: flex; gap: 10px; margin-top: 18px; }
+  .direct a { flex: 1; text-align: center; padding: 14px; border-radius: 999px; font-size: 15px; }
+  .direct .wa { background: var(--cta-bg); color: var(--cta-text); }
+  .direct .tel { border: 1px solid var(--line); color: var(--link); }
+
+  footer { text-align: center; padding: 20px 24px 40px; }
+  footer .brand { font-size: 19px; color: var(--accent); }
+  footer p { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
+
+  /* direction switcher (review tool) */
+  .dir-switch {
+    position: fixed; bottom: 0; right: 0; left: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: rgba(15,13,12,.92); backdrop-filter: blur(8px); border-top: 1px solid var(--line);
+  }
+  .dir-switch .ds-label { font-size: 13px; color: var(--muted); margin-inline-end: 6px; }
+  .dir-switch a { font-size: 15px; padding: 8px 20px; border-radius: 999px; border: 1px solid var(--line); color: var(--soft); }
+  .dir-switch a[aria-current="page"] { background: var(--cta-bg); color: var(--cta-text); border-color: var(--cta-bg); }
+
   .reveal { opacity: 0; translate: 0 18px; transition: opacity .6s ease, translate .6s ease; }
   .reveal.in { opacity: 1; translate: 0 0; }
   @media (prefers-reduced-motion: reduce) {
     .reveal { opacity: 1; translate: none; transition: none; }
-    .btn, .card .figure img { transition: none; }
+    .btn, .skip-link { transition: none; }
   }
-
-  /* contact */
-  .contact { border-top: 1px solid var(--line); }
-  .contact .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: start; max-width: 900px; }
-  .contact h2, .contact .sub-h { text-align: start; }
-  form label { display: block; font-size: 15px; color: var(--muted); margin: 14px 0 4px; }
-  form input, form textarea {
-    width: 100%; padding: 11px 14px; font: inherit; color: var(--text);
-    background: var(--field-bg, #fff); border: 1px solid var(--line); border-radius: var(--radius);
-  }
-  form textarea { min-height: 90px; resize: vertical; }
-  form button { margin-top: 20px; width: 100%; }
-  #form-status { margin-top: 12px; font-size: 15.5px; color: var(--link, var(--deep)); min-height: 1.4em; }
-  .contact-direct { background: color-mix(in srgb, var(--line) 40%, var(--bg)); border-radius: var(--radius); padding: 26px; }
-  .contact-direct h3 { font-size: 22px; margin-bottom: 8px; }
-  .contact-direct p { color: var(--muted); font-size: 15.5px; margin-bottom: 18px; }
-  .contact-direct .btn { width: 100%; margin-bottom: 10px; }
-
-  /* footer */
-  footer {
-    border-top: 1px solid var(--line); text-align: center;
-    padding: 34px 20px 96px; color: var(--muted); font-size: 15px;
-  }
-  footer .brand { font-size: 22px; display: block; margin-bottom: 8px; }
-  footer .foot-links { display: flex; gap: 18px; justify-content: center; margin: 10px 0; flex-wrap: wrap; }
-
-  /* floaters */
-  .fab {
-    position: fixed; bottom: 18px; inset-inline-end: 18px; z-index: 30;
-    width: 56px; height: 56px; border-radius: 50%; background: #128C7E;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,.22);
-  }
-  .fab svg { width: 30px; height: 30px; fill: #fff; }
-  /* TODO: קיבוע עיצוב סופי — למחוק את פאנל העיצוב, הסקריפט שלו ואת מחלקות הערכות */
-  .theme-toggle {
-    position: fixed; bottom: 26px; inset-inline-start: 18px; z-index: 30;
-    padding: 9px 18px; border-radius: 999px; border: 1px solid var(--accent);
-    background: var(--bg); color: var(--link, var(--deep)); font: inherit; font-size: 14px; cursor: pointer;
-    box-shadow: 0 4px 14px rgba(0,0,0,.12);
-  }
-  .design-panel[hidden] { display: none; }
-  .design-panel {
-    position: fixed; bottom: 78px; inset-inline-start: 18px; z-index: 31;
-    background: var(--bg); border: 1px solid var(--line); border-radius: 14px;
-    padding: 14px 16px; box-shadow: 0 10px 30px rgba(0,0,0,.18); display: grid; gap: 12px;
-  }
-  .dp-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-  .dp-dot { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--bg); box-shadow: 0 0 0 1px var(--line); cursor: pointer; }
-  .dp-dot.active { box-shadow: 0 0 0 2px var(--deep); }
-  @keyframes toggle-pulse {
-    0%, 100% { box-shadow: 0 4px 14px rgba(0,0,0,.12); }
-    50% { box-shadow: 0 0 0 12px color-mix(in srgb, var(--deep) 30%, transparent); }
-  }
-  .theme-toggle { animation: toggle-pulse 1.6s ease 1.2s 3; }
-  @media (prefers-reduced-motion: reduce) { .theme-toggle { animation: none; } }
-
-  @media (max-width: 820px) {
-    section { padding: 44px 16px; }
-    .hero .wrap { grid-template-columns: 1fr; gap: 26px; }
-    .hero .figure { order: -1; }
-    .hero .figure img { max-height: 52vh; object-position: center 25%; }
-    .hero-text h1 { text-align: center; }
-    .hero-text p { text-align: center; margin-inline: auto; }
-    .cta-row { justify-content: center; }
-    .cta-row .btn { flex: 1 1 100%; }
-    .why-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
-    .cards { grid-template-columns: repeat(2, 1fr); }
-    .real-grid { columns: 2; column-gap: 14px; }
-    .contact .wrap { grid-template-columns: 1fr; }
-    .site-nav { gap: 14px; }
-    .site-nav a { font-size: 14.5px; }
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .card { flex-basis: 250px; }
+    .card > .sim img { width: 250px; height: 288px; }
   }
 </style>
 </head>
@@ -251,257 +158,116 @@
 
 <a class="skip-link" href="#main">דילוג לתוכן</a>
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="#">גולי · פרח של אהבה</a>
-    <nav class="site-nav" aria-label="ניווט ראשי">
-      <a href="#collection">הקולקציה</a>
-      <a href="#about">אודות</a>
-      <a href="#contact">יצירת קשר</a>
-    </nav>
-    <a class="btn btn-main btn-small" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c0 .2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.1.5.1.7-.1l1.1-1.3c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
-      וואטסאפ
-    </a>
-  </div>
-</header>
-
 <main id="main">
-  <section class="hero">
+  <section class="hero" style="padding:0">
+    <img src="assets/img/hero.webp" alt="כלה מחזיקה זר פנינים בעבודת יד, תמונת המחשה" fetchpriority="high">
+    <div class="hero-top">
+      <span class="brand">גולי · פרח של אהבה</span>
+      <a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">וואטסאפ</a>
+    </div>
+    <div class="hero-body">
+      <span class="kicker">תמונת המחשה</span>
+      <h1>זר כלה<br>שנשאר לתמיד</h1>
+      <p>תחרה, אורגנזה ופנינים. נרקם ידנית בהזמנה אישית, ונשאר איתך גם ביום הנישואין העשירי.</p>
+      <a class="btn" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">לפרטים בוואטסאפ</a>
+      <div class="hero-meta"><span>052-6336363</span><span>·</span><span>מענה תוך יום</span><span>·</span><span>מגיע באריזת מתנה</span></div>
+    </div>
+  </section>
+
+  <section class="process">
     <div class="wrap">
-      <div class="hero-blob" aria-hidden="true"></div>
-      <div class="hero-text">
-        <h1>זר כלה שנשאר לתמיד</h1>
-        <p>זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים: מזכרת אחת יפה מהיום המיוחד שלך.</p>
-        <div class="cta-row">
-          <a class="btn btn-main" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c0 .2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.1.5.1.7-.1l1.1-1.3c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
-            לפרטים בוואטסאפ
-          </a>
-          <a class="btn btn-sec" href="tel:+972526336363">052-6336363</a>
-        </div>
-        <p class="trust-strip"><span>נרקם ידנית בהזמנה אישית</span><span>כל זר יחיד במינו</span><span>מגיע באריזת מתנה</span></p>
+      <span class="kicker">איך זה עובד</span>
+      <div class="rows">
+        <div class="row"><span class="num">01</span><div><strong>שיחת היכרות בוואטסאפ</strong><span>מספרת לי על השמלה והסגנון</span></div></div>
+        <div class="row"><span class="num">02</span><div><strong>בוחרות דגם, תחרה וגוון פנינים</strong><span>אני שולחת דוגמאות לאישור</span></div></div>
+        <div class="row"><span class="num">03</span><div><strong>רקימה ידנית · כשלושה שבועות</strong><span>פנינה אחר פנינה, רק שלך</span></div></div>
+        <div class="row"><span class="num">04</span><div><strong>מסירה באריזת מתנה</strong><span>מוכן לצילומים של הבוקר</span></div></div>
       </div>
-      <div class="figure">
-        <img src="assets/img/hero.webp" alt="כלה מחזיקה זר פנינים בעבודת יד" fetchpriority="high">
-        <span class="sim-badge">תמונת המחשה</span>
+      <p class="note">מזמינות בדרך כלל 4–8 שבועות לפני האירוע. יש תאריך קרוב? כתבי לי, נמצא פתרון.</p>
+    </div>
+  </section>
+
+  <section class="collection" id="collection" style="padding-bottom:8px">
+    <div class="wrap">
+      <div class="col-head"><h2>הקולקציה</h2><small>7 דגמים · החליקי</small></div>
+      <p class="col-sub">בכל כרטיס: למעלה הדמיה של הזר ביום הגדול, למטה הצילום האמיתי שלו.</p>
+    </div>
+    <div class="carousel ph">
+      <div class="card">
+        <div class="sim"><img src="assets/img/bride-lily.webp" alt="כלה מחזיקה זר שושן תחרה" loading="lazy"><span class="sim-tag">הדמיה</span></div>
+        <div class="pair"><img src="assets/img/real-lacepearl.webp" alt="עלי תחרה רקומה בשולי פנינים, צילום אמיתי" loading="lazy"><div><strong>שושן תחרה</strong><span>עלי תחרה רקומה בשוליים מוזהבים</span></div></div>
+        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20שושן%20תחרה">רוצה כזה ←</a>
+      </div>
+      <div class="card">
+        <div class="sim"><img src="assets/img/bride-lace.webp" alt="כלה מחזיקה זר Pearl Lace" loading="lazy"><span class="sim-tag">הדמיה</span></div>
+        <div class="pair"><img src="assets/img/real-gold.webp" alt="פרח תחרה בגימור זהב באריזה, צילום אמיתי" loading="lazy"><div><strong>Pearl Lace</strong><span>פפיון תחרה עם שולי פנינים וסרטים</span></div></div>
+        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Lace">רוצה כזה ←</a>
+      </div>
+      <div class="card">
+        <div class="sim"><img src="assets/img/bride-elegance.webp" alt="כלה מחזיקה זר Pearl Elegance" loading="lazy"><span class="sim-tag">הדמיה</span></div>
+        <div class="pair"><img src="assets/img/real-elegance-day.webp" alt="פרח פנינים מלא באור יום, צילום אמיתי" loading="lazy"><div><strong>Pearl Elegance</strong><span>פרח פנינים מלא, כולו נצנוץ</span></div></div>
+        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Elegance">רוצה כזה ←</a>
+      </div>
+      <div class="card">
+        <div class="sim"><img src="assets/img/bride-dream.webp" alt="כלה מחזיקה זר Pearl Dream" loading="lazy"><span class="sim-tag">הדמיה</span></div>
+        <div class="pair"><img src="assets/img/real-dream-top.webp" alt="פרח אורגנזה בקווי פנינים מלמעלה, צילום אמיתי" loading="lazy"><div><strong>Pearl Dream</strong><span>עלי אורגנזה שקופים בקווי מתאר של פנינים</span></div></div>
+        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Dream">רוצה כזה ←</a>
+      </div>
+      <div class="card">
+        <div class="sim"><img src="assets/img/bride-orchid.webp" alt="כלה מחזיקה זר Pearl Orchid" loading="lazy"><span class="sim-tag">הדמיה</span></div>
+        <div class="pair"><img src="assets/img/real-orchid-day.webp" alt="מפל סחלבים ופנינים על אגרטל, צילום אמיתי" loading="lazy"><div><strong>Pearl Orchid</strong><span>מפל סחלבים משי עם שרשראות פנינים</span></div></div>
+        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Orchid">רוצה כזה ←</a>
+      </div>
+      <div class="card">
+        <div class="sim"><img src="assets/img/bride-rose.webp" alt="כלה מחזיקה ורד תחרה" loading="lazy"><span class="sim-tag">הדמיה</span></div>
+        <div class="pair"><img src="assets/img/real-rose.webp" alt="ורד תחרה עם אבקני פנינים, צילום אמיתי" loading="lazy"><div><strong>ורד תחרה</strong><span>שכבות תחרה רקומה עם אבקני פנינים</span></div></div>
+        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20תחרה">רוצה כזה ←</a>
+      </div>
+      <div class="card">
+        <div class="sim"><img src="assets/img/bride-calla.webp" alt="כלה מחזיקה קאלה מאורגנזה" loading="lazy"><span class="sim-tag">הדמיה</span></div>
+        <div class="pair"><img src="assets/img/real-calla.webp" alt="קאלה מאורגנזה שקופה, צילום אמיתי" loading="lazy"><div><strong>קאלה מאורגנזה</strong><span>קאלה עדינה מעלי אורגנזה בקו מינימלי</span></div></div>
+        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20קאלה%20מאורגנזה">רוצה כזה ←</a>
       </div>
     </div>
   </section>
 
-  <section class="why">
-    <div class="wrap">
-      <h2 class="ruled">למה זר שנשאר לתמיד</h2>
-      <div class="why-grid">
-        <div>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21C7 16.5 3 13.2 3 9.3 3 6.4 5.2 4.5 7.7 4.5c1.7 0 3.3.9 4.3 2.3 1-1.4 2.6-2.3 4.3-2.3 2.5 0 4.7 1.9 4.7 4.8 0 3.9-4 7.2-9 11.7Z"/></svg>
-          <h3>עבודת יד באהבה</h3>
-          <p>כל זר נרקם ידנית, פנינה אחר פנינה</p>
-        </div>
-        <div>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5c2.5 0 3.5 3.5 5.5 3.5s3-3.5 5.5-3.5 3.5 1.6 3.5 3.5-1 3.5-3.5 3.5-3.5-3.5-5.5-3.5-3 3.5-5.5 3.5S3 13.9 3 12s1-3.5 3.5-3.5Z"/></svg>
-          <h3>מזכרת לכל החיים</h3>
-          <p>הזר נשאר איתך גם שנים אחרי החתונה</p>
-        </div>
-        <div>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2.2"/><path d="M12 4.5v3M12 16.5v3M4.5 12h3M16.5 12h3M6.7 6.7l2.1 2.1M15.2 15.2l2.1 2.1M17.3 6.7l-2.1 2.1M8.8 15.2l-2.1 2.1" stroke-linecap="round"/></svg>
-          <h3>תמיד בשיא הפריחה</h3>
-          <p>לא נובל, לא תלוי בעונה ולא מרגיש את הקיץ</p>
-        </div>
-        <div>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></svg>
-          <h3>בהתאמה אישית</h3>
-          <p>נבנה יחד איתך לפי השמלה והסגנון שלך</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="collection" id="collection">
-    <div class="wrap">
-      <h2 class="ruled">הקולקציה</h2>
-      <p class="sub-h">שבעה דגמים, אינסוף התאמות אישיות · התמונות להמחשה בלבד. הזר האמיתי נרקם עבורך ביד</p>
-      <div class="cards">
-        <div class="card">
-          <div class="figure"><img src="assets/img/bride-lily.webp" alt="כלה מחזיקה זר שושן תחרה" loading="lazy"><span class="sim-badge">תמונת המחשה</span></div>
-          <h3>שושן תחרה</h3>
-          <p>עלי תחרה רקומה בשוליים מוזהבים</p>
-          <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20שושן%20תחרה">רוצה כזה? דברי איתי</a>
-        </div>
-        <div class="card">
-          <div class="figure"><img src="assets/img/bride-lace.webp" alt="כלה מחזיקה זר Pearl Lace" loading="lazy"><span class="sim-badge">תמונת המחשה</span></div>
-          <h3>Pearl Lace</h3>
-          <p>פפיון תחרה עם שולי פנינים וסרטים</p>
-          <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Lace">רוצה כזה? דברי איתי</a>
-        </div>
-        <div class="card">
-          <div class="figure"><img src="assets/img/bride-elegance.webp" alt="כלה מחזיקה זר Pearl Elegance" loading="lazy"><span class="sim-badge">תמונת המחשה</span></div>
-          <h3>Pearl Elegance</h3>
-          <p>פרח פנינים מלא, כולו נצנוץ</p>
-          <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Elegance">רוצה כזה? דברי איתי</a>
-        </div>
-        <div class="card">
-          <div class="figure"><img src="assets/img/bride-dream.webp" alt="כלה מחזיקה זר Pearl Dream" loading="lazy"><span class="sim-badge">תמונת המחשה</span></div>
-          <h3>Pearl Dream</h3>
-          <p>עלי אורגנזה שקופים בקווי מתאר של פנינים</p>
-          <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Dream">רוצה כזה? דברי איתי</a>
-        </div>
-        <div class="card">
-          <div class="figure"><img src="assets/img/bride-orchid.webp" alt="כלה מחזיקה זר Pearl Orchid" loading="lazy"><span class="sim-badge">תמונת המחשה</span></div>
-          <h3>Pearl Orchid</h3>
-          <p>מפל סחלבים משי עם שרשראות פנינים</p>
-          <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Orchid">רוצה כזה? דברי איתי</a>
-        </div>
-        <div class="card">
-          <div class="figure"><img src="assets/img/bride-rose.webp" alt="כלה מחזיקה ורד תחרה" loading="lazy"><span class="sim-badge">תמונת המחשה</span></div>
-          <h3>ורד תחרה</h3>
-          <p>ורד שכבות תחרה רקומה עם אבקני פנינים</p>
-          <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20תחרה">רוצה כזה? דברי איתי</a>
-        </div>
-        <div class="card">
-          <div class="figure"><img src="assets/img/bride-calla.webp" alt="כלה מחזיקה קאלה מאורגנזה" loading="lazy"><span class="sim-badge">תמונת המחשה</span></div>
-          <h3>קאלה מאורגנזה</h3>
-          <p>קאלה עדינה מעלי אורגנזה בקו מינימלי</p>
-          <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20קאלה%20מאורגנזה">רוצה כזה? דברי איתי</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="real">
-    <div class="wrap">
-      <h2 class="ruled">עבודת יד אמיתית</h2>
-      <p class="sub-h">אלה הזרים האמיתיים, רגע אחרי שנרקמו, בלי פילטרים ובלי הדמיות.</p>
-      <div class="real-grid">
-        <figure class="figure">
-          <img src="assets/img/real-rose.webp" alt="ורד תחרה עם אבקני פנינים באור יום" width="800" height="806" loading="lazy">
-          <figcaption>ורד תחרה באור בוקר</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/real-orchid-day.webp" alt="מפל סחלבים ופנינים על אגרטל זכוכית" width="800" height="933" loading="lazy">
-          <figcaption>Pearl Orchid על הכן</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/real-dream-top.webp" alt="פרח אורגנזה בקווי פנינים במבט מלמעלה" width="800" height="805" loading="lazy">
-          <figcaption>Pearl Dream, מבט מלמעלה</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/real-lacepearl.webp" alt="עלי תחרה רקומה בשולי פנינים" width="800" height="796" loading="lazy">
-          <figcaption>עלי תחרה בשולי פנינים</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/real-gold.webp" alt="פרח תחרה בגימור זהב בתוך אריזת מתנה" width="800" height="696" loading="lazy">
-          <figcaption>גימור זהב עדין, כבר באריזה</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/real-calla.webp" alt="פרח קאלה מאורגנזה שקופה ותחרה" width="800" height="826" loading="lazy">
-          <figcaption>קאלה מאורגנזה</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/real-elegance-day.webp" alt="פרח פנינים מלא באור יום" width="800" height="949" loading="lazy">
-          <figcaption>Pearl Elegance באור יום</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/real-detail.webp" alt="תקריב של שרשראות פנינים וסרט תחרה" width="800" height="913" loading="lazy">
-          <figcaption>הפרטים הקטנים: פנינה, תחרה, סרט</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/real-gift.webp" alt="זר תחרה ארוז באריזת מתנה פירמידה שקופה" width="800" height="715" loading="lazy">
-          <figcaption>מוכן למסירה, באריזת מתנה</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="moments">
-    <div class="wrap">
-      <h2 class="ruled">הזר ביום הגדול</h2>
-      <p class="sub-h">תמונות המחשה שנוצרו מהזרים האמיתיים. ככה זה מרגיש</p>
-      <div class="moments-grid">
-        <figure class="figure">
-          <img src="assets/img/gallery-1.webp" alt="כלה מחזיקה זר שושן תחרה, תמונת המחשה" loading="lazy">
-          <span class="sim-badge">תמונת המחשה</span>
-          <figcaption>שושן תחרה</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/gallery-2.webp" alt="כלה יושבת עם זר Pearl Orchid, תמונת המחשה" loading="lazy">
-          <span class="sim-badge">תמונת המחשה</span>
-          <figcaption>Pearl Orchid</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/gallery-3.webp" alt="כלה מושיטה זר Pearl Dream, תמונת המחשה" loading="lazy">
-          <span class="sim-badge">תמונת המחשה</span>
-          <figcaption>Pearl Dream</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="assets/img/gallery-4.webp" alt="כלה מחזיקה ורד תחרה גדול, תמונת המחשה" loading="lazy">
-          <span class="sim-badge">תמונת המחשה</span>
-          <figcaption>ורד תחרה</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="quote-band">
-    <div class="wrap">
-      <blockquote>זר מפרחים חיים נובל אחרי יום. הזר שלך יישאר גם ביום הנישואין העשירי.</blockquote>
-      <a class="btn btn-main" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">דברי איתי על הזר שלך</a>
-    </div>
+  <section class="quote" style="padding-inline:24px">
+    <img class="tex" src="assets/img/texture.webp" alt="">
+    <p>זר מפרחים חיים נובל אחרי יום. שלך יישאר על המדף.</p>
+    <a class="btn" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">דברי איתי על הזר שלך</a>
   </section>
 
   <section class="about" id="about">
     <div class="wrap">
-      <h2>מי מאחורי הפרחים</h2>
-      <div class="divider" aria-hidden="true">♡</div>
-      <!-- TODO: סיפור אמיתי -->
-      <p>גאולה יוצרת זרי כלה בעבודת יד, פרח אחר פרח: תחרה, אורגנזה ופנינים שנארגים לזר שנשאר איתך גם אחרי החתונה. כל זר נתפר בהתאמה אישית לכלה: לשמלה, לסגנון, לסיפור שלה. פרח של אהבה נולד מהאמונה שדבר שנעשה באהבה צריך להישאר לתמיד.</p>
+      <span class="kicker">מי מאחורי הפרחים</span>
+      <p style="margin-top:12px">גאולה יוצרת זרי כלה בעבודת יד, פרח אחר פרח: תחרה, אורגנזה ופנינים שנארגים לזר שנשאר איתך גם אחרי החתונה. כל זר נתפר בהתאמה אישית לכלה: לשמלה, לסגנון, לסיפור שלה.</p>
     </div>
   </section>
 
   <section class="faq">
     <div class="wrap">
-      <h2 class="ruled">שאלות ששואלות אותי</h2>
-      <div class="faq-item">
-        <h3>אפשר להתאים זר במיוחד בשבילי?</h3>
-        <p>בטח. כל זר נרקם בהזמנה אישית: בוחרות יחד דגם, גווני פנינים ותחרה, והזר נבנה להתאים לשמלה ולסגנון שלך.</p>
-      </div>
-      <div class="faq-item">
-        <h3>ממה עשוי הזר, והוא באמת נשאר?</h3>
-        <p>תחרה, אורגנזה ופנינים, בלי פרחים חיים. הזר לא נובל, לא מאבד צורה, ונשאר איתך כמזכרת גם שנים אחרי החתונה.</p>
-      </div>
-      <div class="faq-item">
-        <h3>זה מתאים גם כמתנה?</h3>
-        <p>מאוד. הזר מגיע באריזת מתנה שקופה וחגיגית: מתנה מרגשת לכלה מחברות, מאמא או מאחות.</p>
-      </div>
+      <h2>שאלות ששואלות אותי</h2>
+      <div class="faq-item"><strong>אפשר להתאים זר במיוחד בשבילי?</strong><p>בטח. בוחרות יחד דגם, גווני פנינים ותחרה, והזר נבנה להתאים לשמלה ולסגנון שלך.</p></div>
+      <div class="faq-item"><strong>והוא באמת נשאר?</strong><p>בלי פרחים חיים. לא נובל, לא מאבד צורה, ונשאר מזכרת גם שנים אחרי החתונה.</p></div>
+      <div class="faq-item"><strong>זה מתאים גם כמתנה?</strong><p>מאוד. מגיע באריזת מתנה שקופה: מתנה מרגשת לכלה מחברות, מאמא או מאחות.</p></div>
     </div>
   </section>
 
   <section class="contact" id="contact">
     <div class="wrap">
-      <div>
-        <h2>דברו איתי</h2>
-        <p class="sub-h">מלאי פרטים וגאולה תחזור אלייך, או פשוט כתבי בוואטסאפ</p>
-        <form id="lead-form">
-          <label for="f-name">שם *</label>
-          <input id="f-name" name="name" required autocomplete="name">
-          <label for="f-phone">טלפון *</label>
-          <input id="f-phone" name="phone" type="tel" required pattern="0[2-9][0-9]{7,8}" title="מספר טלפון ישראלי, ספרות בלבד, למשל 0526336363" autocomplete="tel" dir="ltr" style="text-align:end">
-          <label for="f-date">תאריך האירוע (לא חובה)</label>
-          <input id="f-date" name="date" type="date">
-          <label for="f-msg">כמה מילים (לא חובה)</label>
-          <textarea id="f-msg" name="message" placeholder="על איזה זר חלמת?"></textarea>
-          <button class="btn btn-main" type="submit">שלחו לי פרטים</button>
-          <p id="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-      <div class="contact-direct">
-        <h3>מעדיפה ישירות?</h3>
-        <p>הדרך הכי מהירה: הודעה קצרה בוואטסאפ. אפשר גם להתקשר.</p>
-        <a class="btn btn-main" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c0 .2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.1.5.1.7-.1l1.1-1.3c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
-          לוואטסאפ של גאולה
-        </a>
-        <a class="btn btn-sec" href="tel:+972526336363">להתקשר: 052-6336363</a>
+      <h2>דברו איתי</h2>
+      <p class="lead">מלאי פרטים וגאולה תחזור אלייך, או פשוט כתבי בוואטסאפ</p>
+      <form id="lead-form" novalidate>
+        <div><label for="f-name">שם *</label><input id="f-name" name="name" required autocomplete="name"></div>
+        <div><label for="f-phone">טלפון *</label><input id="f-phone" name="phone" type="tel" required pattern="0[2-9][0-9]{7,8}" title="מספר טלפון ישראלי, ספרות בלבד, למשל 0526336363" autocomplete="tel" dir="ltr" style="text-align:end"></div>
+        <div><label for="f-date">תאריך האירוע (לא חובה)</label><input id="f-date" name="date" type="date"></div>
+        <div><label for="f-msg">כמה מילים (לא חובה)</label><textarea id="f-msg" name="message" placeholder="על איזה זר חלמת?"></textarea></div>
+        <button class="btn" type="submit">שלחו לי פרטים</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="direct">
+        <a class="wa" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">לוואטסאפ של גאולה</a>
+        <a class="tel" href="tel:+972526336363">052-6336363</a>
       </div>
     </div>
   </section>
@@ -509,30 +275,15 @@
 
 <footer>
   <span class="brand">גולי · פרח של אהבה</span>
-  <div class="foot-links">
-    <a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">וואטסאפ</a>
-    <a href="tel:+972526336363">052-6336363</a>
-  </div>
-  <span>זרי כלה בעבודת יד · נעשה באהבה ♡ <span id="year"></span></span>
+  <p>זרי כלה בעבודת יד · נעשה באהבה · <span id="year"></span></p>
 </footer>
 
-<a class="fab" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה" aria-label="פתיחת שיחת וואטסאפ">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.2 1.1-1.7 1.2-.4 0-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c0 .2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.1.5.1.7-.1l1.1-1.3c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.3.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
-</a>
-
-<!-- TODO: קיבוע עיצוב סופי — למחוק את הפאנל, הכפתור והסקריפט שלהם -->
-<div class="design-panel" id="design-panel" hidden>
-  <div class="dp-row" role="group" aria-label="פלטת צבעים">
-    <button type="button" class="dp-dot" data-pal="night" style="background:#1A1D21" aria-label="לילה" title="לילה"></button>
-    <button type="button" class="dp-dot" data-pal="ivory" style="background:#B59D7E" aria-label="שנהב" title="שנהב"></button>
-    <button type="button" class="dp-dot" data-pal="mist" style="background:#A99AA0" aria-label="ערפל" title="ערפל"></button>
-    <button type="button" class="dp-dot" data-pal="rose" style="background:#A0524A" aria-label="ורד עתיק" title="ורד עתיק"></button>
-    <button type="button" class="dp-dot" data-pal="gold" style="background:#CBA95B" aria-label="זהב חם" title="זהב חם"></button>
-    <button type="button" class="dp-dot" data-pal="sage" style="background:#4E6B42" aria-label="מרווה" title="מרווה"></button>
-    <button type="button" class="dp-dot" data-pal="wine" style="background:#7A2F44" aria-label="יין" title="יין"></button>
-  </div>
-</div>
-<button class="theme-toggle" id="theme-toggle" aria-expanded="false" aria-controls="design-panel">🎨 צבעים</button>
+<nav class="dir-switch" aria-label="בחירת כיוון עיצוב">
+  <span class="ds-label">כיוון עיצוב:</span>
+  <a href="index.html" aria-current="page">לילה</a>
+  <a href="editorial.html">מגזין</a>
+  <a href="gallery.html">גלריה</a>
+</nav>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -540,52 +291,28 @@
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('main section .wrap').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('main section .wrap, .quote p, .card').forEach(el => { el.classList.add('reveal'); io.observe(el); });
   }
 
-  const panel = document.getElementById('design-panel');
-  const toggle = document.getElementById('theme-toggle');
-  function currentPal() {
-    const p = document.documentElement.className.match(/pal-(\w+)/);
-    return p ? p[1] : 'night';
-  }
-  function applyDesign(pal) {
-    document.documentElement.className = 'theme-c pal-' + pal;
-    try { localStorage.setItem('guli-pal2', pal); } catch (e) {}
-    document.querySelectorAll('.dp-dot').forEach(b => b.classList.toggle('active', b.dataset.pal === pal));
-    const bg = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', bg);
-  }
-  toggle.addEventListener('click', () => {
-    const open = panel.hidden;
-    panel.hidden = !open;
-    toggle.setAttribute('aria-expanded', String(open));
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !panel.hidden) {
-      panel.hidden = true;
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.focus();
-    }
-  });
-  document.querySelectorAll('.dp-dot').forEach(b => b.addEventListener('click', () => applyDesign(b.dataset.pal)));
-  applyDesign(currentPal());
-
-  const KEY = 'YOUR_WEB3FORMS_KEY'; // TODO: מפתח אמיתי כשיוחלט מייל העסק
-  document.getElementById('lead-form').addEventListener('submit', async (e) => {
+  const form = document.getElementById('lead-form');
+  const status = document.getElementById('form-status');
+  const KEY = 'YOUR_WEB3FORMS_KEY';
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const f = e.target, data = Object.fromEntries(new FormData(f));
-    const status = document.getElementById('form-status');
+    if (!form.reportValidity()) return;
+    const data = Object.fromEntries(new FormData(form));
     if (KEY === 'YOUR_WEB3FORMS_KEY') { // ponytail: אין עדיין מפתח — הטופס מנותב לוואטסאפ
       const txt = encodeURIComponent(
         'היי גאולה 🌸 השארתי פרטים באתר:\nשם: ' + data.name +
         '\nטלפון: ' + data.phone +
-        '\nתאריך: ' + (data.date || '-') +
+        (data.date ? '\nתאריך האירוע: ' + data.date : '') +
         (data.message ? '\n' + data.message : ''));
-      location.href = 'https://wa.me/972526336363?text=' + txt;
+      window.open('https://wa.me/972526336363?text=' + txt, '_blank');
+      status.textContent = 'ממשיכות בוואטסאפ 🌸';
       return;
     }
+    status.textContent = 'שולח...';
     try {
       const r = await fetch('https://api.web3forms.com/submit', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -593,12 +320,10 @@
       });
       status.textContent = r.ok ? 'הפרטים נשלחו! גאולה תחזור אלייך בהקדם 🌸'
                                 : 'משהו השתבש. אפשר פשוט לכתוב לנו בוואטסאפ';
-      if (r.ok) f.reset();
-    } catch {
+    } catch (err) {
       status.textContent = 'משהו השתבש. אפשר פשוט לכתוב לנו בוואטסאפ';
     }
   });
 </script>
-
 </body>
 </html>
