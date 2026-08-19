@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>גולי · פרח של אהבה | זרי כלה מתחרה ופנינים</title>
 <meta name="description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. מזכרת שנשארת לתמיד. גולי · פרח של אהבה.">
-<meta name="theme-color" content="#0F0D0C">
+<meta name="theme-color" content="#211517">
+<meta name="color-scheme" content="light dark">
 <meta property="og:title" content="גולי · פרח של אהבה | זרי כלה מתחרה ופנינים">
 <meta property="og:description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. מזכרת שנשארת לתמיד.">
 <meta property="og:image" content="https://guli-flower.wp1.host/assets/img/og.jpg">
@@ -17,16 +18,35 @@
 <style>
   /* impeccable-disable gpt-thin-border-wide-shadow -- soft elevation is this direction's committed look */
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --bg:#0F0D0C; --panel:#151211; --line:#221F1C; --text:#F1EDE6; --head:#F8F5EF;
-    --muted:#8E8378; --soft:#B4AAA0; --accent:#D9C7BC; --link:#E4D5C7;
-    --cta-bg:#E4D5C7; --cta-text:#14100E; --field-bg:#1A1613; --deep:#8A6F4D;
+  /* dark (night rose) — the client's chosen look; also the system-dark default */
+  :root, html[data-theme="dark"] {
+    --bg:#211517; --panel:#281B1E; --line:#3A2A2E; --text:#F5EDEB; --head:#F9F2F0;
+    --muted:#A89093; --soft:#C9B2B0; --accent:#D9A79B; --link:#EAD0C8;
+    --cta-bg:#EAD0C8; --cta-text:#2A1518; --field-bg:#2A1C1F; --deep:#A0524A;
+    --scrim:33,21,23; --tag-bg:rgba(33,21,23,.55); --tag-text:#F2E4DF;
+    color-scheme: dark;
+  }
+  /* light (antique rose on ivory) */
+  html[data-theme="light"] {
+      --bg:#FBF3F0; --panel:#F3E4DF; --line:#E9D3CC; --text:#3B2226; --head:#2A1518;
+      --muted:#7A5650; --soft:#5E3F43; --accent:#A0524A; --link:#8E463F;
+      --cta-bg:#A0524A; --cta-text:#FFF7F4; --field-bg:#FFFFFF; --deep:#A0524A;
+      --scrim:251,243,240; --tag-bg:rgba(251,243,240,.72); --tag-text:#3B2226;
+      color-scheme: light;
+  }
+  @media (prefers-color-scheme: light) {
+    html:not([data-theme]) {
+      --bg:#FBF3F0; --panel:#F3E4DF; --line:#E9D3CC; --text:#3B2226; --head:#2A1518;
+      --muted:#7A5650; --soft:#5E3F43; --accent:#A0524A; --link:#8E463F;
+      --cta-bg:#A0524A; --cta-text:#FFF7F4; --field-bg:#FFFFFF; --deep:#A0524A;
+      --scrim:251,243,240; --tag-bg:rgba(251,243,240,.72); --tag-text:#3B2226;
+      color-scheme: light;
+    }
   }
   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   body {
     background: var(--bg); color: var(--text);
     font-family: 'Alef', sans-serif; font-size: 17px; line-height: 1.55;
-    padding-bottom: 96px;
   }
   h1, h2, h3 { font-family: 'Bellefair', serif; font-weight: 400; color: var(--head); }
   a { color: var(--link); text-decoration: none; }
@@ -48,17 +68,17 @@
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
   /* hero */
-  .hero { position: relative; min-height: 92svh; display: flex; flex-direction: column; justify-content: flex-end; }
+  .hero { position: relative; min-height: 92svh; max-height: 1000px; display: flex; flex-direction: column; justify-content: flex-end; }
   .hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 22%; }
   .hero::before {
     content: ""; position: absolute; inset: 0; z-index: 1;
-    background: linear-gradient(to top, #0F0D0C 4%, rgba(15,13,12,.72) 30%, rgba(15,13,12,.1) 58%, rgba(15,13,12,.28));
+    background: linear-gradient(to top, rgb(var(--scrim)) 4%, rgba(var(--scrim),.72) 30%, rgba(var(--scrim),.1) 58%, rgba(var(--scrim),.28));
   }
   .hero-top {
     position: absolute; top: 0; right: 0; left: 0; z-index: 2;
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px 24px 40px;
-    background: linear-gradient(to bottom, rgba(15,13,12,.78), rgba(15,13,12,.42) 55%, rgba(15,13,12,0));
+    background: linear-gradient(to bottom, rgba(var(--scrim),.78), rgba(var(--scrim),.42) 55%, rgba(var(--scrim),0));
   }
   .brand { font-family: 'Bellefair', serif; font-size: 18px; color: var(--head); }
   .hero-body { position: relative; z-index: 2; padding: 0 24px 30px; max-width: 720px; margin-inline: auto; width: 100%; }
@@ -76,30 +96,26 @@
   .row span { display: block; font-size: 14.5px; color: var(--muted); }
   .note { font-size: 14.5px; color: var(--muted); margin-top: 16px; }
 
-  /* collection carousel */
+  /* collection: editorial duos on the dark rose world */
   .col-head { display: flex; align-items: baseline; justify-content: space-between; }
   .col-head h2 { font-size: clamp(30px, 5vw, 40px); }
   .col-head small { font-size: 12.5px; color: var(--muted); }
   .col-sub { font-size: 14.5px; color: var(--muted); margin-top: 6px; max-width: 52ch; }
-  .ph { scrollbar-width: none; }
-  .ph::-webkit-scrollbar { display: none; }
-  .carousel {
-    display: flex; gap: 18px; overflow-x: auto; padding: 20px 24px 8px;
-    scroll-snap-type: x mandatory; max-width: 1200px; margin-inline: auto;
-  }
-  .card { flex: 0 0 272px; scroll-snap-align: start; }
-  .card > .sim { position: relative; }
-  .card > .sim img { width: 272px; height: 310px; object-fit: cover; }
-  .card .sim-tag { position: absolute; bottom: 8px; inset-inline-start: 8px; font-size: 11px; letter-spacing: .12em; color: #E9E2D8; background: rgba(15,13,12,.55); padding: 3px 9px; border-radius: 999px; }
-  .card .pair { display: flex; gap: 12px; margin-top: 8px; align-items: flex-start; }
-  .card .pair img { width: 92px; height: 92px; object-fit: cover; transform: rotate(-1.6deg); border: 1px solid rgba(255,255,255,.14); }
-  .card .pair strong { display: block; font-family: 'Bellefair', serif; font-weight: 400; font-size: 22px; color: var(--head); }
-  .card .pair span { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.45; }
-  .card .want { display: inline-block; margin-top: 10px; font-size: 14.5px; }
+  .models { display: grid; gap: 34px; margin-top: 24px; }
+  .model .duo { display: grid; gap: 8px; }
+  .model:nth-child(odd) .duo { grid-template-columns: 1.55fr 1fr; }
+  .model:nth-child(even) .duo { grid-template-columns: 1fr 1.55fr; }
+  .model:nth-child(odd) .duo .car.real { align-self: end; }
+  .model:nth-child(even) .duo .car.real { align-self: start; }
+  .duo-caps { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 5px; }
+  .model .m-row { display: flex; align-items: baseline; justify-content: space-between; margin-top: 10px; }
+  .model .m-row strong { font-family: 'Bellefair', serif; font-weight: 400; font-size: 24px; color: var(--head); }
+  .model .m-row a { font-size: 14.5px; }
+  .model .desc { font-size: 14.5px; color: var(--muted); }
 
   /* quote */
   .quote { position: relative; background: var(--panel); overflow: hidden; text-align: center; padding: 48px 24px 52px; }
-  .quote img.tex { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .13; }
+  .quote img.tex { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .11; }
   .quote p { position: relative; font-family: 'Bellefair', serif; font-size: clamp(28px, 4.5vw, 40px); line-height: 1.28; color: var(--head); max-width: 24ch; margin-inline: auto; }
   .quote .btn { position: relative; max-width: 300px; margin: 24px auto 0; }
 
@@ -130,16 +146,39 @@
   footer .brand { font-size: 19px; color: var(--accent); }
   footer p { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
 
-  /* direction switcher (review tool) */
-  .dir-switch {
-    position: fixed; bottom: 0; right: 0; left: 0; z-index: 50;
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-    background: rgba(15,13,12,.92); backdrop-filter: blur(8px); border-top: 1px solid var(--line);
+  /* theme toggle (light/dark), floating bottom inline-start */
+  .theme-toggle {
+    position: fixed; bottom: 18px; inset-inline-start: 18px; z-index: 50;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--panel); color: var(--text); font: inherit; font-size: 14px; cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,0,0,.18);
   }
-  .dir-switch .ds-label { font-size: 13px; color: var(--muted); margin-inline-end: 6px; }
-  .dir-switch a { font-size: 15px; padding: 8px 20px; border-radius: 999px; border: 1px solid var(--line); color: var(--soft); }
-  .dir-switch a[aria-current="page"] { background: var(--cta-bg); color: var(--cta-text); border-color: var(--cta-bg); }
+  .theme-toggle .ico { width: 16px; height: 16px; display: block; }
+  .theme-toggle .lbl-dark, html[data-theme="dark"] .theme-toggle .lbl-light { display: none; }
+  html[data-theme="dark"] .theme-toggle .lbl-dark { display: inline; }
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme]) .theme-toggle .lbl-light { display: none; }
+    html:not([data-theme]) .theme-toggle .lbl-dark { display: inline; }
+  }
+
+  /* model duo = two carousels: sim (auto) + real (manual) */
+  .duo .car { position: relative; overflow: hidden; aspect-ratio: 3 / 4; background: var(--panel); touch-action: pan-y; }
+  .duo .car .track { display: flex; height: 100%; transition: transform .6s cubic-bezier(.22,1,.36,1); }
+  .duo .car .track img { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; user-select: none; -webkit-user-drag: none; }
+  .duo .car .tag { position: absolute; top: 8px; inset-inline-start: 8px; font-size: 11px; letter-spacing: .1em; color: var(--tag-text); background: var(--tag-bg); padding: 3px 9px; border-radius: 999px; pointer-events: none; }
+  .duo .car .dots { position: absolute; bottom: 8px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; pointer-events: none; }
+  .duo .car .dots i { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.55); box-shadow: 0 0 0 1px rgba(0,0,0,.25); }
+  .duo .car .dots i.on { background: #fff; }
+  .duo .car .nav {
+    position: absolute; top: 50%; translate: 0 -50%; width: 34px; height: 34px; border-radius: 50%;
+    border: none; background: var(--tag-bg); color: var(--tag-text); font-size: 22px; line-height: 1; cursor: pointer;
+    display: grid; place-items: center; opacity: .92; font-family: system-ui, sans-serif;
+  }
+  .duo .car .nav.prev { inset-inline-start: 6px; }
+  .duo .car .nav.next { inset-inline-end: 6px; }
+  .duo .car.manual .track { transition: transform .35s ease; }
+  @media (prefers-reduced-motion: reduce) { .duo .car .track { transition: none; } }
 
   .reveal { opacity: 0; translate: 0 18px; transition: opacity .6s ease, translate .6s ease; }
   .reveal.in { opacity: 1; translate: 0 0; }
@@ -147,11 +186,7 @@
     .reveal { opacity: 1; translate: none; transition: none; }
     .btn, .skip-link { transition: none; }
   }
-  @media (max-width: 640px) {
-    body { font-size: 16px; }
-    .card { flex-basis: 250px; }
-    .card > .sim img { width: 250px; height: 288px; }
-  }
+  @media (max-width: 640px) { body { font-size: 16px; } }
 </style>
 </head>
 <body>
@@ -187,56 +222,252 @@
     </div>
   </section>
 
-  <section class="collection" id="collection" style="padding-bottom:8px">
+  <section class="collection" id="collection">
     <div class="wrap">
-      <div class="col-head"><h2>הקולקציה</h2><small>9 דגמים · החליקי</small></div>
-      <p class="col-sub">בכל כרטיס: למעלה הדמיה של הזר ביום הגדול, למטה הצילום האמיתי שלו.</p>
-    </div>
-    <div class="carousel ph">
-      <div class="card">
-        <div class="sim"><img src="assets/img/bride-lily.webp" alt="כלה מחזיקה זר שושן תחרה" loading="lazy"><span class="sim-tag">הדמיה</span></div>
-        <div class="pair"><img src="assets/img/real-lacepearl.webp" alt="עלי תחרה רקומה בשולי פנינים, צילום אמיתי" loading="lazy"><div><strong>שושן תחרה</strong><span>עלי תחרה רקומה בשוליים מוזהבים</span></div></div>
-        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20שושן%20תחרה">רוצה כזה ←</a>
-      </div>
-      <div class="card">
-        <div class="sim"><img src="assets/img/bride-lace.webp" alt="כלה מחזיקה זר Pearl Lace" loading="lazy"><span class="sim-tag">הדמיה</span></div>
-        <div class="pair"><img src="assets/img/real-gold.webp" alt="פרח תחרה בגימור זהב באריזה, צילום אמיתי" loading="lazy"><div><strong>Pearl Lace</strong><span>פפיון תחרה עם שולי פנינים וסרטים</span></div></div>
-        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Lace">רוצה כזה ←</a>
-      </div>
-      <div class="card">
-        <div class="sim"><img src="assets/img/bride-elegance.webp" alt="כלה מחזיקה זר Pearl Elegance" loading="lazy"><span class="sim-tag">הדמיה</span></div>
-        <div class="pair"><img src="assets/img/real-elegance-day.webp" alt="פרח פנינים מלא באור יום, צילום אמיתי" loading="lazy"><div><strong>Pearl Elegance</strong><span>פרח פנינים מלא, כולו נצנוץ</span></div></div>
-        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Elegance">רוצה כזה ←</a>
-      </div>
-      <div class="card">
-        <div class="sim"><img src="assets/img/bride-dream.webp" alt="כלה מחזיקה זר Pearl Dream" loading="lazy"><span class="sim-tag">הדמיה</span></div>
-        <div class="pair"><img src="assets/img/real-dream-top.webp" alt="פרח אורגנזה בקווי פנינים מלמעלה, צילום אמיתי" loading="lazy"><div><strong>Pearl Dream</strong><span>עלי אורגנזה שקופים בקווי מתאר של פנינים</span></div></div>
-        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Dream">רוצה כזה ←</a>
-      </div>
-      <div class="card">
-        <div class="sim"><img src="assets/img/bride-orchid.webp" alt="כלה מחזיקה זר Pearl Orchid" loading="lazy"><span class="sim-tag">הדמיה</span></div>
-        <div class="pair"><img src="assets/img/real-orchid-day.webp" alt="מפל סחלבים ופנינים על אגרטל, צילום אמיתי" loading="lazy"><div><strong>Pearl Orchid</strong><span>מפל סחלבים משי עם שרשראות פנינים</span></div></div>
-        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Orchid">רוצה כזה ←</a>
-      </div>
-      <div class="card">
-        <div class="sim"><img src="assets/img/bride-rose.webp" alt="כלה מחזיקה ורד תחרה" loading="lazy"><span class="sim-tag">הדמיה</span></div>
-        <div class="pair"><img src="assets/img/real-rose.webp" alt="ורד תחרה עם אבקני פנינים, צילום אמיתי" loading="lazy"><div><strong>ורד תחרה</strong><span>שכבות תחרה רקומה עם אבקני פנינים</span></div></div>
-        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20תחרה">רוצה כזה ←</a>
-      </div>
-      <div class="card">
-        <div class="sim"><img src="assets/img/bride-calla.webp" alt="כלה מחזיקה קאלה מאורגנזה" loading="lazy"><span class="sim-tag">הדמיה</span></div>
-        <div class="pair"><img src="assets/img/real-calla.webp" alt="קאלה מאורגנזה שקופה, צילום אמיתי" loading="lazy"><div><strong>קאלה מאורגנזה</strong><span>קאלה עדינה מעלי אורגנזה בקו מינימלי</span></div></div>
-        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20קאלה%20מאורגנזה">רוצה כזה ←</a>
-      </div>
-      <div class="card">
-        <div class="sim"><img src="assets/img/bride-silver.webp" alt="כלה מחזיקה ורד כסוף" loading="lazy"><span class="sim-tag">הדמיה</span></div>
-        <div class="pair"><img src="assets/img/real-silver.webp" alt="ורד אורגנזה בנצנוץ כסוף בשולי פנינים, צילום אמיתי" loading="lazy"><div><strong>ורד כסוף</strong><span>עלי אורגנזה בנצנוץ כסוף, בשולי פנינים</span></div></div>
-        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20כסוף">רוצה כזה ←</a>
-      </div>
-      <div class="card">
-        <div class="sim"><img src="assets/img/bride-callas.webp" alt="כלה מחזיקה זר קאלות" loading="lazy"><span class="sim-tag">הדמיה</span></div>
-        <div class="pair"><img src="assets/img/real-callas.webp" alt="זר קאלות לבנות ביד, צילום אמיתי" loading="lazy"><div><strong>זר קאלות</strong><span>קאלות משי לבנות בליפוף סאטן, קו קלאסי ונקי</span></div></div>
-        <a class="want" href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20זר%20קאלות">רוצה כזה ←</a>
+      <div class="col-head"><h2>הקולקציה</h2><small>9 דגמים</small></div>
+      <p class="col-sub">לכל דגם: הדמיות של הזר ביום הגדול (מתחלפות מעצמן), ולצידן צילומי האמת שלו מכמה זוויות (החליקי או לחצי על החיצים).</p>
+      <div class="models">
+        <div class="model">
+          <div class="duo">
+            <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="שושן תחרה, הדמיה">
+              <div class="track">
+                <img src="assets/series/lily-garden-smile.webp" alt="שושן תחרה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/lily-doorway-look.webp" alt="שושן תחרה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/lily-studio-direct.webp" alt="שושן תחרה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/lily-vineyard-walk.webp" alt="שושן תחרה, הדמיה" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">הדמיה</span>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="car real manual" data-count="4" aria-roledescription="קרוסלה" aria-label="שושן תחרה, צילום אמיתי">
+              <div class="track">
+                <img src="assets/real/lily-1.webp" alt="שושן תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/lily-2.webp" alt="שושן תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/lily-3.webp" alt="שושן תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/lily-4.webp" alt="שושן תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">צילום אמיתי</span>
+              <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
+              <button type="button" class="nav next" aria-label="תמונה הבאה">&#8249;</button>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="m-row"><strong>שושן תחרה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20שושן%20תחרה">רוצה כזה ←</a></div>
+          <span class="desc">עלי תחרה רקומה בשוליים מוזהבים</span>
+        </div>
+        <div class="model">
+          <div class="duo">
+            <div class="car real manual" data-count="3" aria-roledescription="קרוסלה" aria-label="Pearl Lace, צילום אמיתי">
+              <div class="track">
+                <img src="assets/real/lace-1.webp" alt="Pearl Lace, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/lace-2.webp" alt="Pearl Lace, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/lace-3.webp" alt="Pearl Lace, צילום אמיתי" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">צילום אמיתי</span>
+              <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
+              <button type="button" class="nav next" aria-label="תמונה הבאה">&#8249;</button>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+            </div>
+            <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Lace, הדמיה">
+              <div class="track">
+                <img src="assets/series/lace-hall-laugh.webp" alt="Pearl Lace, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/lace-beach-profile.webp" alt="Pearl Lace, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/lace-garden-smile.webp" alt="Pearl Lace, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/lace-vineyard-walk.webp" alt="Pearl Lace, הדמיה" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">הדמיה</span>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="m-row"><strong>Pearl Lace</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Lace">רוצה כזה ←</a></div>
+          <span class="desc">פפיון תחרה עם שולי פנינים וסרטים</span>
+        </div>
+        <div class="model">
+          <div class="duo">
+            <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Elegance, הדמיה">
+              <div class="track">
+                <img src="assets/series/elegance-doorway-look.webp" alt="Pearl Elegance, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/elegance-garden-smile.webp" alt="Pearl Elegance, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/elegance-hall-laugh.webp" alt="Pearl Elegance, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/elegance-vineyard-walk.webp" alt="Pearl Elegance, הדמיה" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">הדמיה</span>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="car real manual" data-count="3" aria-roledescription="קרוסלה" aria-label="Pearl Elegance, צילום אמיתי">
+              <div class="track">
+                <img src="assets/real/elegance-1.webp" alt="Pearl Elegance, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/elegance-2.webp" alt="Pearl Elegance, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/elegance-3.webp" alt="Pearl Elegance, צילום אמיתי" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">צילום אמיתי</span>
+              <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
+              <button type="button" class="nav next" aria-label="תמונה הבאה">&#8249;</button>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="m-row"><strong>Pearl Elegance</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Elegance">רוצה כזה ←</a></div>
+          <span class="desc">פרח פנינים מלא, כולו נצנוץ</span>
+        </div>
+        <div class="model">
+          <div class="duo">
+            <div class="car real manual" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Dream, צילום אמיתי">
+              <div class="track">
+                <img src="assets/real/dream-1.webp" alt="Pearl Dream, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/dream-2.webp" alt="Pearl Dream, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/dream-3.webp" alt="Pearl Dream, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/dream-4.webp" alt="Pearl Dream, צילום אמיתי" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">צילום אמיתי</span>
+              <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
+              <button type="button" class="nav next" aria-label="תמונה הבאה">&#8249;</button>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Dream, הדמיה">
+              <div class="track">
+                <img src="assets/series/dream-studio-direct.webp" alt="Pearl Dream, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/dream-beach-profile.webp" alt="Pearl Dream, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/dream-doorway-look.webp" alt="Pearl Dream, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/dream-hall-laugh.webp" alt="Pearl Dream, הדמיה" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">הדמיה</span>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="m-row"><strong>Pearl Dream</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Dream">רוצה כזה ←</a></div>
+          <span class="desc">עלי אורגנזה שקופים בקווי מתאר של פנינים</span>
+        </div>
+        <div class="model">
+          <div class="duo">
+            <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Orchid, הדמיה">
+              <div class="track">
+                <img src="assets/series/orchid-vineyard-walk.webp" alt="Pearl Orchid, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/orchid-beach-profile.webp" alt="Pearl Orchid, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/orchid-doorway-look.webp" alt="Pearl Orchid, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/orchid-studio-direct.webp" alt="Pearl Orchid, הדמיה" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">הדמיה</span>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="car real manual" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Orchid, צילום אמיתי">
+              <div class="track">
+                <img src="assets/real/orchid-1.webp" alt="Pearl Orchid, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/orchid-2.webp" alt="Pearl Orchid, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/orchid-3.webp" alt="Pearl Orchid, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/orchid-4.webp" alt="Pearl Orchid, צילום אמיתי" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">צילום אמיתי</span>
+              <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
+              <button type="button" class="nav next" aria-label="תמונה הבאה">&#8249;</button>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="m-row"><strong>Pearl Orchid</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Orchid">רוצה כזה ←</a></div>
+          <span class="desc">מפל סחלבים משי עם שרשראות פנינים</span>
+        </div>
+        <div class="model">
+          <div class="duo">
+            <div class="car real manual" data-count="4" aria-roledescription="קרוסלה" aria-label="ורד תחרה, צילום אמיתי">
+              <div class="track">
+                <img src="assets/real/rose-1.webp" alt="ורד תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/rose-2.webp" alt="ורד תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/rose-3.webp" alt="ורד תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/rose-4.webp" alt="ורד תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">צילום אמיתי</span>
+              <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
+              <button type="button" class="nav next" aria-label="תמונה הבאה">&#8249;</button>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="ורד תחרה, הדמיה">
+              <div class="track">
+                <img src="assets/series/rose-garden-smile.webp" alt="ורד תחרה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/rose-beach-profile.webp" alt="ורד תחרה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/rose-hall-laugh.webp" alt="ורד תחרה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/rose-studio-direct.webp" alt="ורד תחרה, הדמיה" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">הדמיה</span>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="m-row"><strong>ורד תחרה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20תחרה">רוצה כזה ←</a></div>
+          <span class="desc">שכבות תחרה רקומה עם אבקני פנינים</span>
+        </div>
+        <div class="model">
+          <div class="duo">
+            <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="קאלה מאורגנזה, הדמיה">
+              <div class="track">
+                <img src="assets/series/calla-hall-laugh.webp" alt="קאלה מאורגנזה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/calla-beach-profile.webp" alt="קאלה מאורגנזה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/calla-garden-smile.webp" alt="קאלה מאורגנזה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/calla-studio-direct.webp" alt="קאלה מאורגנזה, הדמיה" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">הדמיה</span>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="car real manual" data-count="2" aria-roledescription="קרוסלה" aria-label="קאלה מאורגנזה, צילום אמיתי">
+              <div class="track">
+                <img src="assets/real/calla-1.webp" alt="קאלה מאורגנזה, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/calla-2.webp" alt="קאלה מאורגנזה, צילום אמיתי" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">צילום אמיתי</span>
+              <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
+              <button type="button" class="nav next" aria-label="תמונה הבאה">&#8249;</button>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i></div>
+            </div>
+          </div>
+          <div class="m-row"><strong>קאלה מאורגנזה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20קאלה%20מאורגנזה">רוצה כזה ←</a></div>
+          <span class="desc">קאלה עדינה מעלי אורגנזה בקו מינימלי</span>
+        </div>
+        <div class="model">
+          <div class="duo">
+            <div class="car real manual" data-count="3" aria-roledescription="קרוסלה" aria-label="ורד כסוף, צילום אמיתי">
+              <div class="track">
+                <img src="assets/real/silver-1.webp" alt="ורד כסוף, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/silver-2.webp" alt="ורד כסוף, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/silver-3.webp" alt="ורד כסוף, צילום אמיתי" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">צילום אמיתי</span>
+              <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
+              <button type="button" class="nav next" aria-label="תמונה הבאה">&#8249;</button>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+            </div>
+            <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="ורד כסוף, הדמיה">
+              <div class="track">
+                <img src="assets/series/silver-doorway-look.webp" alt="ורד כסוף, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/silver-beach-profile.webp" alt="ורד כסוף, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/silver-hall-laugh.webp" alt="ורד כסוף, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/silver-studio-direct.webp" alt="ורד כסוף, הדמיה" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">הדמיה</span>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="m-row"><strong>ורד כסוף</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20כסוף">רוצה כזה ←</a></div>
+          <span class="desc">עלי אורגנזה בנצנוץ כסוף, בשולי פנינים</span>
+        </div>
+        <div class="model">
+          <div class="duo">
+            <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="זר קאלות, הדמיה">
+              <div class="track">
+                <img src="assets/series/callas-garden-smile.webp" alt="זר קאלות, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/callas-beach-profile.webp" alt="זר קאלות, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/callas-hall-laugh.webp" alt="זר קאלות, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/callas-studio-direct.webp" alt="זר קאלות, הדמיה" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">הדמיה</span>
+              <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="car real manual" data-count="1" aria-roledescription="קרוסלה" aria-label="זר קאלות, צילום אמיתי">
+              <div class="track">
+                <img src="assets/real/callas-1.webp" alt="זר קאלות, צילום אמיתי" loading="lazy" width="800" height="1067">
+              </div>
+              <span class="tag">צילום אמיתי</span>
+            </div>
+          </div>
+          <div class="m-row"><strong>זר קאלות</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20זר%20קאלות">רוצה כזה ←</a></div>
+          <span class="desc">קאלות משי לבנות בליפוף סאטן, קו קלאסי ונקי</span>
+        </div>
       </div>
     </div>
   </section>
@@ -288,14 +519,69 @@
   <p>זרי כלה בעבודת יד · נעשה באהבה · <span id="year"></span></p>
 </footer>
 
-<nav class="dir-switch" aria-label="בחירת כיוון עיצוב">
-  <span class="ds-label">כיוון עיצוב:</span>
-  <a href="index.html" aria-current="page">לילה</a>
-  <a href="editorial.html">מגזין</a>
-  <a href="gallery.html">גלריה</a>
-  <a href="rose.html">ורוד</a>
-</nav>
+<button type="button" class="theme-toggle" id="theme-toggle" aria-label="החלפת ערכת צבע">
+  <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.5 0-1-.1-1.4A5.5 5.5 0 0 1 13.4 3.1 9 9 0 0 0 12 3z"/></svg>
+  <span class="lbl-light">מצב כהה</span><span class="lbl-dark">מצב בהיר</span>
+</button>
 
+<script>
+  // theme: default follows the system; the toggle flips light/dark and remembers it
+  (function () {
+    const root = document.documentElement;
+    const meta = document.querySelector('meta[name="theme-color"]');
+    const mq = matchMedia('(prefers-color-scheme: dark)');
+    let saved = null;
+    try { saved = localStorage.getItem('guli-theme'); } catch (e) {}
+    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+    const current = () => root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light');
+    const paint = () => { if (meta) meta.setAttribute('content', current() === 'dark' ? '#211517' : '#FBF3F0'); };
+    paint();
+    mq.addEventListener('change', paint);
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      const next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('guli-theme', next); } catch (e) {}
+      paint();
+    });
+  })();
+
+  // carousels: .auto rotates itself (pauses on hover, respects reduced motion); .manual = arrows + swipe
+  (function () {
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('.duo .car').forEach((car, idx) => {
+      const track = car.querySelector('.track');
+      const n = +car.dataset.count || track.children.length;
+      if (n <= 1) return;
+      const dots = car.querySelectorAll('.dots i');
+      let i = 0, timer = null;
+      // page is RTL: the flex track lays slides right-to-left, so advancing = positive translateX
+      const go = (k) => {
+        i = (k + n) % n;
+        track.style.transform = 'translateX(' + (i * 100) + '%)';
+        dots.forEach((d, j) => d.classList.toggle('on', j === i));
+      };
+      const stop = () => { if (timer) clearInterval(timer); timer = null; };
+      const start = () => { stop(); timer = setInterval(() => go(i + 1), 3600 + (idx % 3) * 500); };
+      if (car.classList.contains('auto') && !reduce) {
+        start();
+        car.addEventListener('pointerenter', stop);
+        car.addEventListener('pointerleave', start);
+        document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+      }
+      const prev = car.querySelector('.nav.prev'), next = car.querySelector('.nav.next');
+      if (prev) prev.addEventListener('click', () => go(i - 1));
+      if (next) next.addEventListener('click', () => go(i + 1));
+      let x0 = null;
+      car.addEventListener('pointerdown', e => { x0 = e.clientX; });
+      car.addEventListener('pointerup', e => {
+        if (x0 == null) return;
+        const dx = e.clientX - x0; x0 = null;
+        if (Math.abs(dx) < 30) return;
+        go(dx < 0 ? i + 1 : i - 1);   // RTL: swipe left reveals the next slide
+      });
+    });
+  })();
+</script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -303,7 +589,7 @@
     const io = new IntersectionObserver((entries) => {
       entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
     }, { threshold: 0.1 });
-    document.querySelectorAll('main section .wrap, .quote p, .card').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+    document.querySelectorAll('main section .wrap, .quote p, .model').forEach(el => { el.classList.add('reveal'); io.observe(el); });
   }
 
   const form = document.getElementById('lead-form');
