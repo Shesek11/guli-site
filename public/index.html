@@ -502,6 +502,7 @@
         <div><label for="f-phone">טלפון *</label><input id="f-phone" name="phone" type="tel" required pattern="0[2-9][0-9]{7,8}" title="מספר טלפון ישראלי, ספרות בלבד, למשל 0526336363" autocomplete="tel" dir="ltr" style="text-align:end"></div>
         <div><label for="f-date">תאריך האירוע (לא חובה)</label><input id="f-date" name="date" type="date"></div>
         <div><label for="f-msg">כמה מילים (לא חובה)</label><textarea id="f-msg" name="message" placeholder="על איזה זר חלמת?"></textarea></div>
+        <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="f-company">חברה</label><input id="f-company" name="company" tabindex="-1" autocomplete="off"></div>
         <button class="btn" type="submit">שלחו לי פרטים</button>
         <p id="form-status" role="status" aria-live="polite"></p>
       </form>
@@ -593,32 +594,26 @@
 
   const form = document.getElementById('lead-form');
   const status = document.getElementById('form-status');
-  const KEY = 'YOUR_WEB3FORMS_KEY';
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!form.reportValidity()) return;
     const data = Object.fromEntries(new FormData(form));
-    if (KEY === 'YOUR_WEB3FORMS_KEY') { // ponytail: אין עדיין מפתח — הטופס מנותב לוואטסאפ
-      const txt = encodeURIComponent(
-        'היי גאולה 🌸 השארתי פרטים באתר:\nשם: ' + data.name +
-        '\nטלפון: ' + data.phone +
-        (data.date ? '\nתאריך האירוע: ' + data.date : '') +
-        (data.message ? '\n' + data.message : ''));
-      window.open('https://wa.me/972526336363?text=' + txt, '_blank');
-      status.textContent = 'ממשיכות בוואטסאפ 🌸';
-      return;
-    }
     status.textContent = 'שולח...';
     try {
-      const r = await fetch('https://api.web3forms.com/submit', {
+      const r = await fetch('https://admin.guli-flowers.co.il/api/lead', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ access_key: KEY, subject: 'פנייה חדשה מהאתר גולי · פרח של אהבה', ...data })
+        body: JSON.stringify(data)
       });
-      status.textContent = r.ok ? 'הפרטים נשלחו! גאולה תחזור אלייך בהקדם 🌸'
-                                : 'משהו השתבש. אפשר פשוט לכתוב לנו בוואטסאפ';
-    } catch (err) {
-      status.textContent = 'משהו השתבש. אפשר פשוט לכתוב לנו בוואטסאפ';
-    }
+      if (r.ok) { status.textContent = 'הפרטים נשלחו! גאולה תחזור אלייך בהקדם 🌸'; form.reset(); return; }
+    } catch (err) {}
+    // כשל בשליחה — ממשיכות בוואטסאפ עם הפרטים שכבר הוקלדו
+    const txt = encodeURIComponent(
+      'היי גאולה 🌸 השארתי פרטים באתר:\nשם: ' + data.name +
+      '\nטלפון: ' + data.phone +
+      (data.date ? '\nתאריך האירוע: ' + data.date : '') +
+      (data.message ? '\n' + data.message : ''));
+    window.open('https://wa.me/972526336363?text=' + txt, '_blank');
+    status.textContent = 'ממשיכות בוואטסאפ 🌸';
   });
 </script>
 </body>
