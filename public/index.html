@@ -502,7 +502,8 @@
         <div><label for="f-phone">טלפון *</label><input id="f-phone" name="phone" type="tel" required pattern="0[2-9][0-9]{7,8}" title="מספר טלפון ישראלי, ספרות בלבד, למשל 0526336363" autocomplete="tel" dir="ltr" style="text-align:end"></div>
         <div><label for="f-date">תאריך האירוע (לא חובה)</label><input id="f-date" name="date" type="date"></div>
         <div><label for="f-msg">כמה מילים (לא חובה)</label><textarea id="f-msg" name="message" placeholder="על איזה זר חלמת?"></textarea></div>
-        <div style="position:absolute;left:-9999px" aria-hidden="true"><label for="f-company">חברה</label><input id="f-company" name="company" tabindex="-1" autocomplete="off"></div>
+        <!-- honeypot: clip-hidden (not offset off-screen — in RTL a left offset EXPANDS the horizontal scroll area) -->
+        <div style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap" aria-hidden="true"><label for="f-company">חברה</label><input id="f-company" name="company" tabindex="-1" autocomplete="off"></div>
         <button class="btn" type="submit">שלחו לי פרטים</button>
         <p id="form-status" role="status" aria-live="polite"></p>
       </form>
