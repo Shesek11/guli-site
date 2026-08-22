@@ -10,7 +10,17 @@
 <meta property="og:title" content="גולי · פרח של אהבה | זרי כלה מתחרה ופנינים">
 <meta property="og:description" content="זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. מזכרת שנשארת לתמיד.">
 <meta property="og:image" content="https://guli-flowers.co.il/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="זר כלה מפנינים ותחרה בעבודת יד">
 <meta property="og:url" content="https://guli-flowers.co.il/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="גולי · פרח של אהבה">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://guli-flowers.co.il/">
+<link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Florist","@id":"https://guli-flowers.co.il/#business","name":"גולי · פרח של אהבה","alternateName":"Guli Flowers","description":"זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. כל זר נרקם ידנית בהזמנה אישית ונשאר מזכרת לתמיד.","url":"https://guli-flowers.co.il/","telephone":"+972526336363","image":"https://guli-flowers.co.il/assets/img/og.jpg","areaServed":{"@type":"Country","name":"ישראל"},"founder":{"@type":"Person","name":"גאולה"},"knowsLanguage":"he","contactPoint":{"@type":"ContactPoint","contactType":"sales","telephone":"+972526336363","url":"https://wa.me/972526336363","availableLanguage":"he"}},{"@type":"WebSite","@id":"https://guli-flowers.co.il/#website","url":"https://guli-flowers.co.il/","name":"גולי · פרח של אהבה","inLanguage":"he","publisher":{"@id":"https://guli-flowers.co.il/#business"}},{"@type":"WebPage","@id":"https://guli-flowers.co.il/#webpage","url":"https://guli-flowers.co.il/","name":"גולי · פרח של אהבה | זרי כלה מתחרה ופנינים","description":"זרי כלה בעבודת יד מתחרה, אורגנזה ופנינים. מזכרת שנשארת לתמיד.","inLanguage":"he","isPartOf":{"@id":"https://guli-flowers.co.il/#website"},"about":{"@id":"https://guli-flowers.co.il/#business"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://guli-flowers.co.il/assets/img/og.jpg"}}]}</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMZN09MMRL"></script>
@@ -61,6 +71,8 @@
   img { display: block; max-width: 100%; }
   .wrap { max-width: 720px; margin-inline: auto; padding-inline: 24px; }
   .kicker { font-size: 12px; letter-spacing: .28em; color: var(--muted); }
+  /* h2 kickers keep the kicker look — the heading is for the document outline, not the design */
+  h2.kicker { font-family: 'Alef', sans-serif; font-weight: 400; color: var(--muted); }
   .skip-link {
     position: fixed; top: 0; inset-inline-start: 12px; z-index: 60;
     background: var(--cta-bg); color: var(--cta-text); padding: 10px 18px;
@@ -117,7 +129,7 @@
   .model:nth-child(even) .duo .car.real { align-self: start; }
   .duo-caps { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 5px; }
   .model .m-row { display: flex; align-items: baseline; justify-content: space-between; margin-top: 10px; }
-  .model .m-row strong { font-family: 'Bellefair', serif; font-weight: 400; font-size: 24px; color: var(--head); }
+  .model .m-row h3 { font-family: 'Bellefair', serif; font-weight: 400; font-size: 24px; color: var(--head); }
   .model .m-row a { font-size: 14.5px; }
   .model .desc { font-size: 14.5px; color: var(--muted); }
 
@@ -203,7 +215,7 @@
 
 <main id="main">
   <section class="hero" style="padding:0">
-    <img src="assets/img/hero.webp" alt="כלה מחזיקה זר פנינים בעבודת יד, תמונת המחשה" fetchpriority="high">
+    <img src="assets/img/hero.webp" alt="כלה מחזיקה זר פנינים בעבודת יד, תמונת המחשה" fetchpriority="high" width="1024" height="1536">
     <div class="hero-top">
       <span class="brand">גולי · פרח של אהבה</span>
       <a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20זר%20כלה">וואטסאפ</a>
@@ -219,7 +231,7 @@
 
   <section class="process">
     <div class="wrap">
-      <span class="kicker">איך זה עובד</span>
+      <h2 class="kicker">איך זה עובד</h2>
       <div class="rows">
         <div class="row"><span class="num">01</span><div><strong>שיחת היכרות בוואטסאפ</strong><span>מספרת לי על השמלה והסגנון</span></div></div>
         <div class="row"><span class="num">02</span><div><strong>בוחרות דגם, תחרה וגוון פנינים</strong><span>אני שולחת דוגמאות לאישור</span></div></div>
@@ -239,20 +251,20 @@
           <div class="duo">
             <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="שושן תחרה, הדמיה">
               <div class="track">
-                <img src="assets/series/39335a0ad7e9.webp" alt="שושן תחרה, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/159f57d89ce8.webp" alt="שושן תחרה, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/c41695156dfa.webp" alt="שושן תחרה, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/cfbaa02de733.webp" alt="שושן תחרה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/39335a0ad7e9.webp" alt="זר כלה שושן תחרה — הדמיה 1" loading="lazy" width="800" height="1067">
+                <img src="assets/series/159f57d89ce8.webp" alt="זר כלה שושן תחרה — הדמיה 2" loading="lazy" width="800" height="1067">
+                <img src="assets/series/c41695156dfa.webp" alt="זר כלה שושן תחרה — הדמיה 3" loading="lazy" width="800" height="1067">
+                <img src="assets/series/cfbaa02de733.webp" alt="זר כלה שושן תחרה — הדמיה 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">הדמיה</span>
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
             <div class="car real manual" data-count="4" aria-roledescription="קרוסלה" aria-label="שושן תחרה, צילום אמיתי">
               <div class="track">
-                <img src="assets/real/5969698f7e23.webp" alt="שושן תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/9b4b4ef80e2f.webp" alt="שושן תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/d784d8a6dab9.webp" alt="שושן תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/b18ad817e4f9.webp" alt="שושן תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/5969698f7e23.webp" alt="זר כלה שושן תחרה בעבודת יד — צילום אמיתי 1" loading="lazy" width="800" height="1067">
+                <img src="assets/real/9b4b4ef80e2f.webp" alt="זר כלה שושן תחרה בעבודת יד — צילום אמיתי 2" loading="lazy" width="800" height="1067">
+                <img src="assets/real/d784d8a6dab9.webp" alt="זר כלה שושן תחרה בעבודת יד — צילום אמיתי 3" loading="lazy" width="800" height="1067">
+                <img src="assets/real/b18ad817e4f9.webp" alt="זר כלה שושן תחרה בעבודת יד — צילום אמיתי 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">צילום אמיתי</span>
               <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
@@ -260,16 +272,16 @@
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
           </div>
-          <div class="m-row"><strong>שושן תחרה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20שושן%20תחרה">רוצה כזה ←</a></div>
+          <div class="m-row"><h3>שושן תחרה</h3><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20שושן%20תחרה">רוצה כזה ←</a></div>
           <span class="desc">עלי תחרה רקומה בשוליים מוזהבים</span>
         </div>
         <div class="model">
           <div class="duo">
             <div class="car real manual" data-count="3" aria-roledescription="קרוסלה" aria-label="Pearl Lace, צילום אמיתי">
               <div class="track">
-                <img src="assets/real/968a4fbf2c95.webp" alt="Pearl Lace, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/46e66251b1e7.webp" alt="Pearl Lace, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/4a6f07886543.webp" alt="Pearl Lace, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/968a4fbf2c95.webp" alt="זר כלה Pearl Lace בעבודת יד — צילום אמיתי 1" loading="lazy" width="800" height="1067">
+                <img src="assets/real/46e66251b1e7.webp" alt="זר כלה Pearl Lace בעבודת יד — צילום אמיתי 2" loading="lazy" width="800" height="1067">
+                <img src="assets/real/4a6f07886543.webp" alt="זר כלה Pearl Lace בעבודת יד — צילום אמיתי 3" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">צילום אמיתי</span>
               <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
@@ -278,34 +290,34 @@
             </div>
             <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Lace, הדמיה">
               <div class="track">
-                <img src="assets/series/554784b37cbf.webp" alt="Pearl Lace, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/a59f0a4d04c8.webp" alt="Pearl Lace, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/02446f4e6a99.webp" alt="Pearl Lace, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/6f573ece0527.webp" alt="Pearl Lace, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/554784b37cbf.webp" alt="זר כלה Pearl Lace — הדמיה 1" loading="lazy" width="800" height="1067">
+                <img src="assets/series/a59f0a4d04c8.webp" alt="זר כלה Pearl Lace — הדמיה 2" loading="lazy" width="800" height="1067">
+                <img src="assets/series/02446f4e6a99.webp" alt="זר כלה Pearl Lace — הדמיה 3" loading="lazy" width="800" height="1067">
+                <img src="assets/series/6f573ece0527.webp" alt="זר כלה Pearl Lace — הדמיה 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">הדמיה</span>
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
           </div>
-          <div class="m-row"><strong>Pearl Lace</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Lace">רוצה כזה ←</a></div>
+          <div class="m-row"><h3>Pearl Lace</h3><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Lace">רוצה כזה ←</a></div>
           <span class="desc">פפיון תחרה עם שולי פנינים וסרטים</span>
         </div>
         <div class="model">
           <div class="duo">
             <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Elegance, הדמיה">
               <div class="track">
-                <img src="assets/series/1ec72a18b837.webp" alt="Pearl Elegance, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/7a70f0c79fc4.webp" alt="Pearl Elegance, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/7c6be617597c.webp" alt="Pearl Elegance, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/d519e1858b44.webp" alt="Pearl Elegance, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/1ec72a18b837.webp" alt="זר כלה Pearl Elegance — הדמיה 1" loading="lazy" width="800" height="1067">
+                <img src="assets/series/7a70f0c79fc4.webp" alt="זר כלה Pearl Elegance — הדמיה 2" loading="lazy" width="800" height="1067">
+                <img src="assets/series/7c6be617597c.webp" alt="זר כלה Pearl Elegance — הדמיה 3" loading="lazy" width="800" height="1067">
+                <img src="assets/series/d519e1858b44.webp" alt="זר כלה Pearl Elegance — הדמיה 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">הדמיה</span>
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
             <div class="car real manual" data-count="2" aria-roledescription="קרוסלה" aria-label="Pearl Elegance, צילום אמיתי">
               <div class="track">
-                <img src="assets/real/e9046038febb.webp" alt="Pearl Elegance, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/cb7a29218fb2.webp" alt="Pearl Elegance, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/e9046038febb.webp" alt="זר כלה Pearl Elegance בעבודת יד — צילום אמיתי 1" loading="lazy" width="800" height="1067">
+                <img src="assets/real/cb7a29218fb2.webp" alt="זר כלה Pearl Elegance בעבודת יד — צילום אמיתי 2" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">צילום אמיתי</span>
               <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
@@ -313,17 +325,17 @@
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i></div>
             </div>
           </div>
-          <div class="m-row"><strong>Pearl Elegance</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Elegance">רוצה כזה ←</a></div>
+          <div class="m-row"><h3>Pearl Elegance</h3><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Elegance">רוצה כזה ←</a></div>
           <span class="desc">פרח פנינים מלא, כולו נצנוץ</span>
         </div>
         <div class="model">
           <div class="duo">
             <div class="car real manual" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Dream, צילום אמיתי">
               <div class="track">
-                <img src="assets/real/c8e15cef94cd.webp" alt="Pearl Dream, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/e5329e414769.webp" alt="Pearl Dream, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/8c5fb9889f53.webp" alt="Pearl Dream, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/beb15c7a129f.webp" alt="Pearl Dream, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/c8e15cef94cd.webp" alt="זר כלה Pearl Dream בעבודת יד — צילום אמיתי 1" loading="lazy" width="800" height="1067">
+                <img src="assets/real/e5329e414769.webp" alt="זר כלה Pearl Dream בעבודת יד — צילום אמיתי 2" loading="lazy" width="800" height="1067">
+                <img src="assets/real/8c5fb9889f53.webp" alt="זר כלה Pearl Dream בעבודת יד — צילום אמיתי 3" loading="lazy" width="800" height="1067">
+                <img src="assets/real/beb15c7a129f.webp" alt="זר כלה Pearl Dream בעבודת יד — צילום אמיתי 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">צילום אמיתי</span>
               <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
@@ -332,36 +344,36 @@
             </div>
             <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Dream, הדמיה">
               <div class="track">
-                <img src="assets/series/e5a6722584f1.webp" alt="Pearl Dream, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/0baa795f181e.webp" alt="Pearl Dream, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/95d81fc13608.webp" alt="Pearl Dream, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/2d558d4968ec.webp" alt="Pearl Dream, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/e5a6722584f1.webp" alt="זר כלה Pearl Dream — הדמיה 1" loading="lazy" width="800" height="1067">
+                <img src="assets/series/0baa795f181e.webp" alt="זר כלה Pearl Dream — הדמיה 2" loading="lazy" width="800" height="1067">
+                <img src="assets/series/95d81fc13608.webp" alt="זר כלה Pearl Dream — הדמיה 3" loading="lazy" width="800" height="1067">
+                <img src="assets/series/2d558d4968ec.webp" alt="זר כלה Pearl Dream — הדמיה 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">הדמיה</span>
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
           </div>
-          <div class="m-row"><strong>Pearl Dream</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Dream">רוצה כזה ←</a></div>
+          <div class="m-row"><h3>Pearl Dream</h3><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Dream">רוצה כזה ←</a></div>
           <span class="desc">עלי אורגנזה שקופים בקווי מתאר של פנינים</span>
         </div>
         <div class="model">
           <div class="duo">
             <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Orchid, הדמיה">
               <div class="track">
-                <img src="assets/series/cbb35e41da39.webp" alt="Pearl Orchid, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/514225fc6110.webp" alt="Pearl Orchid, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/e5220345a6c3.webp" alt="Pearl Orchid, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/92963783347e.webp" alt="Pearl Orchid, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/cbb35e41da39.webp" alt="זר כלה Pearl Orchid — הדמיה 1" loading="lazy" width="800" height="1067">
+                <img src="assets/series/514225fc6110.webp" alt="זר כלה Pearl Orchid — הדמיה 2" loading="lazy" width="800" height="1067">
+                <img src="assets/series/e5220345a6c3.webp" alt="זר כלה Pearl Orchid — הדמיה 3" loading="lazy" width="800" height="1067">
+                <img src="assets/series/92963783347e.webp" alt="זר כלה Pearl Orchid — הדמיה 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">הדמיה</span>
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
             <div class="car real manual" data-count="4" aria-roledescription="קרוסלה" aria-label="Pearl Orchid, צילום אמיתי">
               <div class="track">
-                <img src="assets/real/88338b6cd78c.webp" alt="Pearl Orchid, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/6d04032517cb.webp" alt="Pearl Orchid, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/c19116dc650c.webp" alt="Pearl Orchid, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/49a51501dab8.webp" alt="Pearl Orchid, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/88338b6cd78c.webp" alt="זר כלה Pearl Orchid בעבודת יד — צילום אמיתי 1" loading="lazy" width="800" height="1067">
+                <img src="assets/real/6d04032517cb.webp" alt="זר כלה Pearl Orchid בעבודת יד — צילום אמיתי 2" loading="lazy" width="800" height="1067">
+                <img src="assets/real/c19116dc650c.webp" alt="זר כלה Pearl Orchid בעבודת יד — צילום אמיתי 3" loading="lazy" width="800" height="1067">
+                <img src="assets/real/49a51501dab8.webp" alt="זר כלה Pearl Orchid בעבודת יד — צילום אמיתי 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">צילום אמיתי</span>
               <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
@@ -369,17 +381,17 @@
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
           </div>
-          <div class="m-row"><strong>Pearl Orchid</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Orchid">רוצה כזה ←</a></div>
+          <div class="m-row"><h3>Pearl Orchid</h3><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20Pearl%20Orchid">רוצה כזה ←</a></div>
           <span class="desc">מפל סחלבים משי עם שרשראות פנינים</span>
         </div>
         <div class="model">
           <div class="duo">
             <div class="car real manual" data-count="4" aria-roledescription="קרוסלה" aria-label="ורד תחרה, צילום אמיתי">
               <div class="track">
-                <img src="assets/real/68186feeeaa3.webp" alt="ורד תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/6327840d28c7.webp" alt="ורד תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/b58f69440601.webp" alt="ורד תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/9b6684fecc89.webp" alt="ורד תחרה, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/68186feeeaa3.webp" alt="זר כלה ורד תחרה בעבודת יד — צילום אמיתי 1" loading="lazy" width="800" height="1067">
+                <img src="assets/real/6327840d28c7.webp" alt="זר כלה ורד תחרה בעבודת יד — צילום אמיתי 2" loading="lazy" width="800" height="1067">
+                <img src="assets/real/b58f69440601.webp" alt="זר כלה ורד תחרה בעבודת יד — צילום אמיתי 3" loading="lazy" width="800" height="1067">
+                <img src="assets/real/9b6684fecc89.webp" alt="זר כלה ורד תחרה בעבודת יד — צילום אמיתי 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">צילום אמיתי</span>
               <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
@@ -388,34 +400,34 @@
             </div>
             <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="ורד תחרה, הדמיה">
               <div class="track">
-                <img src="assets/series/fa2a38fb1d4e.webp" alt="ורד תחרה, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/2ae5138be277.webp" alt="ורד תחרה, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/c5c053800a93.webp" alt="ורד תחרה, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/cf61eef4d51d.webp" alt="ורד תחרה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/fa2a38fb1d4e.webp" alt="זר כלה ורד תחרה — הדמיה 1" loading="lazy" width="800" height="1067">
+                <img src="assets/series/2ae5138be277.webp" alt="זר כלה ורד תחרה — הדמיה 2" loading="lazy" width="800" height="1067">
+                <img src="assets/series/c5c053800a93.webp" alt="זר כלה ורד תחרה — הדמיה 3" loading="lazy" width="800" height="1067">
+                <img src="assets/series/cf61eef4d51d.webp" alt="זר כלה ורד תחרה — הדמיה 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">הדמיה</span>
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
           </div>
-          <div class="m-row"><strong>ורד תחרה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20תחרה">רוצה כזה ←</a></div>
+          <div class="m-row"><h3>ורד תחרה</h3><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20תחרה">רוצה כזה ←</a></div>
           <span class="desc">שכבות תחרה רקומה עם אבקני פנינים</span>
         </div>
         <div class="model">
           <div class="duo">
             <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="קאלה מאורגנזה, הדמיה">
               <div class="track">
-                <img src="assets/series/e8c843a0d97c.webp" alt="קאלה מאורגנזה, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/9090b0523344.webp" alt="קאלה מאורגנזה, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/ffde1895ad25.webp" alt="קאלה מאורגנזה, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/6e55ef51655d.webp" alt="קאלה מאורגנזה, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/e8c843a0d97c.webp" alt="זר כלה קאלה מאורגנזה — הדמיה 1" loading="lazy" width="800" height="1067">
+                <img src="assets/series/9090b0523344.webp" alt="זר כלה קאלה מאורגנזה — הדמיה 2" loading="lazy" width="800" height="1067">
+                <img src="assets/series/ffde1895ad25.webp" alt="זר כלה קאלה מאורגנזה — הדמיה 3" loading="lazy" width="800" height="1067">
+                <img src="assets/series/6e55ef51655d.webp" alt="זר כלה קאלה מאורגנזה — הדמיה 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">הדמיה</span>
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
             <div class="car real manual" data-count="2" aria-roledescription="קרוסלה" aria-label="קאלה מאורגנזה, צילום אמיתי">
               <div class="track">
-                <img src="assets/real/e7f0d0bae63c.webp" alt="קאלה מאורגנזה, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/279f7dd60cc8.webp" alt="קאלה מאורגנזה, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/e7f0d0bae63c.webp" alt="זר כלה קאלה מאורגנזה בעבודת יד — צילום אמיתי 1" loading="lazy" width="800" height="1067">
+                <img src="assets/real/279f7dd60cc8.webp" alt="זר כלה קאלה מאורגנזה בעבודת יד — צילום אמיתי 2" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">צילום אמיתי</span>
               <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
@@ -423,16 +435,16 @@
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i></div>
             </div>
           </div>
-          <div class="m-row"><strong>קאלה מאורגנזה</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20קאלה%20מאורגנזה">רוצה כזה ←</a></div>
+          <div class="m-row"><h3>קאלה מאורגנזה</h3><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20קאלה%20מאורגנזה">רוצה כזה ←</a></div>
           <span class="desc">קאלה עדינה מעלי אורגנזה בקו מינימלי</span>
         </div>
         <div class="model">
           <div class="duo">
             <div class="car real manual" data-count="3" aria-roledescription="קרוסלה" aria-label="ורד כסוף, צילום אמיתי">
               <div class="track">
-                <img src="assets/real/3d6ed7aa780c.webp" alt="ורד כסוף, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/a5946e7db107.webp" alt="ורד כסוף, צילום אמיתי" loading="lazy" width="800" height="1067">
-                <img src="assets/real/a31a8e423751.webp" alt="ורד כסוף, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/3d6ed7aa780c.webp" alt="זר כלה ורד כסוף בעבודת יד — צילום אמיתי 1" loading="lazy" width="800" height="1067">
+                <img src="assets/real/a5946e7db107.webp" alt="זר כלה ורד כסוף בעבודת יד — צילום אמיתי 2" loading="lazy" width="800" height="1067">
+                <img src="assets/real/a31a8e423751.webp" alt="זר כלה ורד כסוף בעבודת יד — צילום אמיתי 3" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">צילום אמיתי</span>
               <button type="button" class="nav prev" aria-label="תמונה קודמת">&#8250;</button>
@@ -441,38 +453,38 @@
             </div>
             <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="ורד כסוף, הדמיה">
               <div class="track">
-                <img src="assets/series/ee7a71f7ecdf.webp" alt="ורד כסוף, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/8272ece57060.webp" alt="ורד כסוף, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/4352b0f6913b.webp" alt="ורד כסוף, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/0228c5bc221c.webp" alt="ורד כסוף, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/ee7a71f7ecdf.webp" alt="זר כלה ורד כסוף — הדמיה 1" loading="lazy" width="800" height="1067">
+                <img src="assets/series/8272ece57060.webp" alt="זר כלה ורד כסוף — הדמיה 2" loading="lazy" width="800" height="1067">
+                <img src="assets/series/4352b0f6913b.webp" alt="זר כלה ורד כסוף — הדמיה 3" loading="lazy" width="800" height="1067">
+                <img src="assets/series/0228c5bc221c.webp" alt="זר כלה ורד כסוף — הדמיה 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">הדמיה</span>
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
           </div>
-          <div class="m-row"><strong>ורד כסוף</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20כסוף">רוצה כזה ←</a></div>
+          <div class="m-row"><h3>ורד כסוף</h3><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20ורד%20כסוף">רוצה כזה ←</a></div>
           <span class="desc">עלי אורגנזה בנצנוץ כסוף, בשולי פנינים</span>
         </div>
         <div class="model">
           <div class="duo">
             <div class="car sim auto" data-count="4" aria-roledescription="קרוסלה" aria-label="זר קאלות, הדמיה">
               <div class="track">
-                <img src="assets/series/c016c21de949.webp" alt="זר קאלות, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/71de39cd4891.webp" alt="זר קאלות, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/ac9882f86fde.webp" alt="זר קאלות, הדמיה" loading="lazy" width="800" height="1067">
-                <img src="assets/series/b02196fc352d.webp" alt="זר קאלות, הדמיה" loading="lazy" width="800" height="1067">
+                <img src="assets/series/c016c21de949.webp" alt="זר כלה זר קאלות — הדמיה 1" loading="lazy" width="800" height="1067">
+                <img src="assets/series/71de39cd4891.webp" alt="זר כלה זר קאלות — הדמיה 2" loading="lazy" width="800" height="1067">
+                <img src="assets/series/ac9882f86fde.webp" alt="זר כלה זר קאלות — הדמיה 3" loading="lazy" width="800" height="1067">
+                <img src="assets/series/b02196fc352d.webp" alt="זר כלה זר קאלות — הדמיה 4" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">הדמיה</span>
               <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
             </div>
             <div class="car real manual" data-count="1" aria-roledescription="קרוסלה" aria-label="זר קאלות, צילום אמיתי">
               <div class="track">
-                <img src="assets/real/d4b84abcf842.webp" alt="זר קאלות, צילום אמיתי" loading="lazy" width="800" height="1067">
+                <img src="assets/real/d4b84abcf842.webp" alt="זר כלה זר קאלות בעבודת יד — צילום אמיתי 1" loading="lazy" width="800" height="1067">
               </div>
               <span class="tag">צילום אמיתי</span>
             </div>
           </div>
-          <div class="m-row"><strong>זר קאלות</strong><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20זר%20קאלות">רוצה כזה ←</a></div>
+          <div class="m-row"><h3>זר קאלות</h3><a href="https://wa.me/972526336363?text=היי%20גאולה%20🌸%20הגעתי%20מהאתר%20ואשמח%20לשמוע%20פרטים%20על%20הדגם%20זר%20קאלות">רוצה כזה ←</a></div>
           <span class="desc">קאלות משי לבנות בליפוף סאטן, קו קלאסי ונקי</span>
         </div>
       </div>
@@ -487,7 +499,7 @@
 
   <section class="about" id="about">
     <div class="wrap">
-      <span class="kicker">מי מאחורי הפרחים</span>
+      <h2 class="kicker">מי מאחורי הפרחים</h2>
       <p style="margin-top:12px">גאולה יוצרת זרי כלה בעבודת יד, פרח אחר פרח: תחרה, אורגנזה ופנינים שנארגים לזר שנשאר איתך גם אחרי החתונה. כל זר נתפר בהתאמה אישית לכלה: לשמלה, לסגנון, לסיפור שלה.</p>
     </div>
   </section>
