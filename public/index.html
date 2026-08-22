@@ -12,6 +12,14 @@
 <meta property="og:image" content="https://guli-flowers.co.il/assets/img/og.jpg">
 <meta property="og:url" content="https://guli-flowers.co.il/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YMZN09MMRL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YMZN09MMRL');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Alef&display=swap" rel="stylesheet">
@@ -605,7 +613,11 @@
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       });
-      if (r.ok) { status.textContent = 'הפרטים נשלחו! גאולה תחזור אלייך בהקדם 🌸'; form.reset(); return; }
+      if (r.ok) {
+        status.textContent = 'הפרטים נשלחו! גאולה תחזור אלייך בהקדם 🌸'; form.reset();
+        if (typeof gtag === 'function') gtag('event', 'generate_lead');
+        return;
+      }
     } catch (err) {}
     // כשל בשליחה — ממשיכות בוואטסאפ עם הפרטים שכבר הוקלדו
     const txt = encodeURIComponent(
